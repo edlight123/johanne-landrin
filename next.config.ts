@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  reactCompiler: true,
+  // Disable React Compiler for Vercel compatibility
+  reactCompiler: false,
   
   // Production optimizations
   poweredByHeader: false,
