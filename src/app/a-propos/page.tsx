@@ -35,16 +35,16 @@ export default function AboutPage() {
     <div>
       {/* Top section (3 columns) */}
       <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-[260px_1fr_360px] gap-8 lg:gap-10 items-start">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-[320px_1fr_360px] gap-8 lg:gap-10 items-start">
             {/* Column 1: photo */}
             <div className="flex flex-col items-center lg:items-start">
-              <div className="relative w-56 h-56 rounded-2xl overflow-hidden border border-black/10 bg-teal-50">
+              <div className="relative w-72 h-72 rounded-xl overflow-hidden border border-black/10 bg-teal-50">
                 <Image
                   src={siteConfig.profile.imageUrl}
                   alt={siteConfig.name}
                   fill
-                  sizes="224px"
+                  sizes="288px"
                   className="object-cover"
                   priority
                 />
@@ -85,24 +85,38 @@ export default function AboutPage() {
               </div>
             </div>
 
+            {/* Treatment philosophy (under bio, spanning photo+bio columns) */}
+            <div className="lg:col-span-2 lg:col-start-1">
+              <Card>
+                <div className="flex items-start gap-3">
+                  <Shield className="w-6 h-6 text-teal-700 mt-0.5 flex-shrink-0" />
+                  <div className="flex-1">
+                    <h2 className="text-2xl font-semibold text-black">{t.about.approachTitle}</h2>
+                    <p className="mt-4 text-black/70 leading-relaxed">{t.about.approachText}</p>
+                    <p className="mt-4 text-sm text-black/70">{t.about.frameText}</p>
+                  </div>
+                </div>
+              </Card>
+            </div>
+
             {/* Column 3: education, certifications, specializations */}
             <aside className="space-y-6">
               <Card>
-                <h2 className="text-2xl font-semibold text-black">{t.about.educationTitle}</h2>
+                <div className="flex items-center gap-3">
+                  <GraduationCap className="w-6 h-6 text-teal-700 flex-shrink-0" />
+                  <h2 className="text-2xl font-semibold text-black">{t.about.educationTitle}</h2>
+                </div>
                 <p className="mt-3 text-black/70">{t.about.educationIntro}</p>
 
                 <div className="mt-5 space-y-4">
                   {siteConfig.education.map((item) => (
-                    <div key={`${item.institution}-${item.degree}`} className="flex items-start gap-3">
-                      <GraduationCap className="w-6 h-6 text-teal-700 mt-0.5 flex-shrink-0" />
-                      <div className="flex-1">
-                        <div className="flex flex-col gap-1">
-                          <p className="font-semibold text-black">{item.institution}</p>
-                          {item.years && <p className="text-sm text-black/60">{item.years}</p>}
-                        </div>
-                        <p className="mt-2 text-black/70">{item.degree}</p>
-                        {item.details && <p className="mt-1 text-sm text-black/60">{item.details}</p>}
+                    <div key={`${item.institution}-${item.degree}`}>
+                      <div className="flex flex-col gap-1">
+                        <p className="font-semibold text-black">{item.institution}</p>
+                        {item.years && <p className="text-sm text-black/60">{item.years}</p>}
                       </div>
+                      <p className="mt-2 text-black/70">{item.degree}</p>
+                      {item.details && <p className="mt-1 text-sm text-black/60">{item.details}</p>}
                     </div>
                   ))}
                 </div>
@@ -110,7 +124,10 @@ export default function AboutPage() {
 
               {siteConfig.certifications.length > 0 && (
                 <Card>
-                  <h2 className="text-2xl font-semibold text-black">{t.about.certificationsTitle}</h2>
+                  <div className="flex items-center gap-3">
+                    <Shield className="w-6 h-6 text-teal-700 flex-shrink-0" />
+                    <h2 className="text-2xl font-semibold text-black">{t.about.certificationsTitle}</h2>
+                  </div>
                   <p className="mt-3 text-black/70">{t.about.certificationsIntro}</p>
                   <ul className="mt-5 space-y-2 text-black/70">
                     {siteConfig.certifications.map((c) => (
@@ -124,18 +141,19 @@ export default function AboutPage() {
               )}
 
               <Card>
-                <h2 className="text-2xl font-semibold text-black">{t.about.specializationsTitle}</h2>
-                <p className="mt-3 text-black/70">{t.about.specializationsSubtitle}</p>
-                <div className="mt-5 flex flex-wrap gap-2">
-                  {themes.map((theme) => (
-                    <span
-                      key={theme}
-                      className="px-3 py-1.5 rounded-full bg-teal-50 border border-black/10 text-sm text-black/80"
-                    >
-                      {theme}
-                    </span>
-                  ))}
+                <div className="flex items-center gap-3">
+                  <Users className="w-6 h-6 text-teal-700 flex-shrink-0" />
+                  <h2 className="text-2xl font-semibold text-black">{t.about.specializationsTitle}</h2>
                 </div>
+                <p className="mt-3 text-black/70">{t.about.specializationsSubtitle}</p>
+                <ul className="mt-5 space-y-2 text-black/70">
+                  {themes.map((theme) => (
+                    <li key={theme} className="flex items-start gap-2">
+                      <span className="mt-2 h-1.5 w-1.5 rounded-full bg-teal-600 flex-shrink-0" />
+                      <span>{theme}</span>
+                    </li>
+                  ))}
+                </ul>
               </Card>
             </aside>
           </div>
@@ -172,18 +190,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Below: treatment philosophy, etc. */}
+      {/* Below */}
       <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-          <Card>
-            <h2 className="text-2xl font-semibold text-black">{t.about.approachTitle}</h2>
-            <p className="mt-4 text-black/70 leading-relaxed">{t.about.approachText}</p>
-            <div className="mt-6 flex items-start gap-3">
-              <Shield className="w-6 h-6 text-teal-700 mt-0.5 flex-shrink-0" />
-              <p className="text-sm text-black/70">{t.about.frameText}</p>
-            </div>
-          </Card>
-
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
           <div className="rounded-2xl border border-black/10 bg-teal-50 p-10 text-center">
             <h2 className="text-2xl sm:text-3xl font-semibold text-black">{t.about.ctaTitle}</h2>
             <p className="mt-3 text-lg text-black/70 max-w-2xl mx-auto">{t.about.ctaText}</p>
