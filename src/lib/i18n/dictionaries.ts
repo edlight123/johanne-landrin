@@ -200,6 +200,9 @@ export const dictionaries = {
       certificationsTitle: 'Licences & certifications',
       certificationsIntro: 'Références professionnelles (si applicable).',
 
+      specializationsTitle: 'Spécialisations',
+      specializationsSubtitle: 'Domaines de consultation fréquemment abordés en thérapie.',
+
       themesTitle: 'Thématiques abordées',
       themesSubtitle: 'Quelques exemples de sujets travaillés en consultation (liste non exhaustive).',
 
@@ -464,6 +467,9 @@ export const dictionaries = {
 
       certificationsTitle: 'Lisans & sètifikasyon',
       certificationsIntro: 'Referans pwofesyonèl (si sa aplikab).',
+
+      specializationsTitle: 'Espesyalisasyon',
+      specializationsSubtitle: 'Domèn konsiltasyon yo souvan abòde nan terapi.',
 
       themesTitle: 'Tematik yo trete',
       themesSubtitle: 'Kèk egzanp sijè nou ka travay ansanm (lis la pa fini).',

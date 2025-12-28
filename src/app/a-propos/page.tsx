@@ -33,17 +33,18 @@ export default function AboutPage() {
 
   return (
     <div>
-      {/* Hero (profile) */}
+      {/* Top section (3 columns) */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-10 lg:gap-14 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-[260px_1fr_360px] gap-8 lg:gap-10 items-start">
+            {/* Column 1: photo */}
             <div className="flex flex-col items-center lg:items-start">
-              <div className="relative w-44 h-44 rounded-full overflow-hidden border border-black/10 bg-teal-50">
+              <div className="relative w-56 h-56 rounded-2xl overflow-hidden border border-black/10 bg-teal-50">
                 <Image
                   src={siteConfig.profile.imageUrl}
                   alt={siteConfig.name}
                   fill
-                  sizes="176px"
+                  sizes="224px"
                   className="object-cover"
                   priority
                 />
@@ -68,6 +69,7 @@ export default function AboutPage() {
               </div>
             </div>
 
+            {/* Column 2: bio */}
             <div>
               <h1 className="text-4xl sm:text-5xl font-semibold text-black leading-tight">
                 {siteConfig.name}
@@ -112,58 +114,9 @@ export default function AboutPage() {
                 </Card>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Details */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-8 lg:gap-10 items-start">
-            {/* Main column */}
-            <div className="space-y-10">
-              <Card>
-                <h2 className="text-2xl font-semibold text-black">{t.about.approachTitle}</h2>
-                <p className="mt-4 text-black/70 leading-relaxed">{t.about.approachText}</p>
-                <div className="mt-6 flex items-start gap-3">
-                  <Shield className="w-6 h-6 text-teal-700 mt-0.5 flex-shrink-0" />
-                  <p className="text-sm text-black/70">{t.about.frameText}</p>
-                </div>
-              </Card>
-
-              <Card>
-                <h2 className="text-2xl font-semibold text-black">{t.about.themesTitle}</h2>
-                <p className="mt-3 text-black/70">{t.about.themesSubtitle}</p>
-                <div className="mt-5 flex flex-wrap gap-2">
-                  {themes.map((theme) => (
-                    <span
-                      key={theme}
-                      className="px-3 py-1.5 rounded-full bg-teal-50 border border-black/10 text-sm text-black/80"
-                    >
-                      {theme}
-                    </span>
-                  ))}
-                </div>
-              </Card>
-
-              <div className="rounded-2xl border border-black/10 bg-teal-50 p-10 text-center">
-                <h2 className="text-2xl sm:text-3xl font-semibold text-black">{t.about.ctaTitle}</h2>
-                <p className="mt-3 text-lg text-black/70 max-w-2xl mx-auto">{t.about.ctaText}</p>
-                <div className="mt-7 flex flex-col sm:flex-row gap-4 justify-center">
-                  <a href={bookingUrl} target="_blank" rel="noreferrer">
-                    <Button size="lg">{t.common.bookNow}</Button>
-                  </a>
-                  <Link href="/contact">
-                    <Button variant="outline" size="lg">
-                      {t.common.contactUs}
-                    </Button>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            {/* Right column (education + certifications) */}
-            <aside className="space-y-8 lg:sticky lg:top-28">
+            {/* Column 3: education, certifications, specializations */}
+            <aside className="space-y-6">
               <Card>
                 <h2 className="text-2xl font-semibold text-black">{t.about.educationTitle}</h2>
                 <p className="mt-3 text-black/70">{t.about.educationIntro}</p>
@@ -199,7 +152,51 @@ export default function AboutPage() {
                   </ul>
                 </Card>
               )}
+
+              <Card>
+                <h2 className="text-2xl font-semibold text-black">{t.about.specializationsTitle}</h2>
+                <p className="mt-3 text-black/70">{t.about.specializationsSubtitle}</p>
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {themes.map((theme) => (
+                    <span
+                      key={theme}
+                      className="px-3 py-1.5 rounded-full bg-teal-50 border border-black/10 text-sm text-black/80"
+                    >
+                      {theme}
+                    </span>
+                  ))}
+                </div>
+              </Card>
             </aside>
+          </div>
+        </div>
+      </section>
+
+      {/* Below: treatment philosophy, etc. */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+          <Card>
+            <h2 className="text-2xl font-semibold text-black">{t.about.approachTitle}</h2>
+            <p className="mt-4 text-black/70 leading-relaxed">{t.about.approachText}</p>
+            <div className="mt-6 flex items-start gap-3">
+              <Shield className="w-6 h-6 text-teal-700 mt-0.5 flex-shrink-0" />
+              <p className="text-sm text-black/70">{t.about.frameText}</p>
+            </div>
+          </Card>
+
+          <div className="rounded-2xl border border-black/10 bg-teal-50 p-10 text-center">
+            <h2 className="text-2xl sm:text-3xl font-semibold text-black">{t.about.ctaTitle}</h2>
+            <p className="mt-3 text-lg text-black/70 max-w-2xl mx-auto">{t.about.ctaText}</p>
+            <div className="mt-7 flex flex-col sm:flex-row gap-4 justify-center">
+              <a href={bookingUrl} target="_blank" rel="noreferrer">
+                <Button size="lg">{t.common.bookNow}</Button>
+              </a>
+              <Link href="/contact">
+                <Button variant="outline" size="lg">
+                  {t.common.contactUs}
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
