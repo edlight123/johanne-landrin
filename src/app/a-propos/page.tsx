@@ -38,7 +38,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-[320px_1fr_360px] gap-8 lg:gap-10 items-start">
             {/* Column 1: photo */}
-            <div className="flex flex-col items-center lg:items-start">
+            <div className="flex flex-col items-center lg:items-start lg:row-start-1 lg:col-start-1">
               <div className="relative w-72 h-72 rounded-xl overflow-hidden border border-black/10 bg-teal-50">
                 <Image
                   src={siteConfig.profile.imageUrl}
@@ -70,7 +70,7 @@ export default function AboutPage() {
             </div>
 
             {/* Column 2: bio */}
-            <div>
+            <div className="lg:row-start-1 lg:col-start-2">
               <h1 className="text-4xl sm:text-5xl font-semibold text-black leading-tight">
                 {siteConfig.name}
               </h1>
@@ -86,7 +86,7 @@ export default function AboutPage() {
             </div>
 
             {/* Treatment philosophy (under bio, spanning photo+bio columns) */}
-            <div className="lg:col-span-2 lg:col-start-1">
+            <div className="lg:row-start-2 lg:col-start-1 lg:col-span-2">
               <Card>
                 <div className="flex items-start gap-3">
                   <Shield className="w-6 h-6 text-teal-700 mt-0.5 flex-shrink-0" />
@@ -100,7 +100,7 @@ export default function AboutPage() {
             </div>
 
             {/* Column 3: education, certifications, specializations */}
-            <aside className="space-y-6">
+            <aside className="space-y-6 lg:row-start-1 lg:col-start-3">
               <Card>
                 <div className="flex items-center gap-3">
                   <GraduationCap className="w-6 h-6 text-teal-700 flex-shrink-0" />
