@@ -22,10 +22,10 @@ export default function Alert({ children, variant = 'info', className }: AlertPr
       className={cn(
         'rounded-lg border p-4 flex items-start gap-3',
         {
-          'bg-blue-50 border-blue-200 text-blue-900': variant === 'info',
-          'bg-amber-50 border-amber-200 text-amber-900': variant === 'warning',
-          'bg-green-50 border-green-200 text-green-900': variant === 'success',
-          'bg-red-50 border-red-200 text-red-900': variant === 'error',
+          'bg-green-50 border-black/10 text-black': variant === 'info',
+          'bg-green-50 border-black/20 text-black': variant === 'warning',
+          'bg-green-50 border-green-200 text-black': variant === 'success',
+          'bg-white border-black/30 text-black': variant === 'error',
         },
         className
       )}

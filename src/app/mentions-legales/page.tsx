@@ -36,7 +36,7 @@ export default function LegalPage() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl sm:text-5xl font-bold text-stone-900 mb-4">
+          <h1 className="text-4xl sm:text-5xl font-semibold text-black mb-4">
             {t.legal.title}
           </h1>
         </div>
@@ -46,14 +46,14 @@ export default function LegalPage() {
           {sections.map((section, index) => (
             <Card key={index}>
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-teal-50 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <section.icon className="w-6 h-6 text-teal-700" />
+                <div className="w-12 h-12 bg-green-50 border border-black/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <section.icon className="w-6 h-6 text-green-700" />
                 </div>
                 <div className="flex-1">
-                  <h2 className="text-2xl font-bold text-stone-900 mb-3">
+                  <h2 className="text-2xl font-semibold text-black mb-3">
                     {section.title}
                   </h2>
-                  <p className="text-stone-600 leading-relaxed">
+                  <p className="text-black/70 leading-relaxed">
                     {section.content}
                   </p>
                 </div>
@@ -63,12 +63,12 @@ export default function LegalPage() {
         </div>
 
         {/* Footer Note */}
-        <Card className="mt-12 bg-stone-50">
-          <p className="text-sm text-stone-600 text-center">
+        <Card className="mt-12 bg-green-50">
+          <p className="text-sm text-black/70 text-center">
             Pour toute question concernant ces mentions légales, veuillez contacter:{' '}
             <a
               href={`mailto:${siteConfig.contact.email}`}
-              className="text-stone-900 font-medium hover:underline"
+              className="text-black font-medium hover:underline"
             >
               {siteConfig.contact.email}
             </a>

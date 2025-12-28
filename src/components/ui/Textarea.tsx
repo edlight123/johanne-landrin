@@ -15,27 +15,27 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
         {label && (
           <label
             htmlFor={textareaId}
-            className="block text-sm font-medium text-stone-700 mb-1.5"
+            className="block text-sm font-medium text-black/70 mb-1.5"
           >
             {label}
-            {props.required && <span className="text-red-500 ml-1">*</span>}
+            {props.required && <span className="text-green-700 ml-1">*</span>}
           </label>
         )}
         <textarea
           id={textareaId}
           className={cn(
-            'w-full rounded-lg border border-stone-300 bg-white px-4 py-2.5',
-            'text-stone-900 placeholder:text-stone-400',
-            'focus:border-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-600/10',
+            'w-full rounded-lg border border-black/15 bg-white px-4 py-2.5',
+            'text-black placeholder:text-black/40',
+            'focus:border-green-600 focus:outline-none focus:ring-2 focus:ring-green-600/15',
             'disabled:cursor-not-allowed disabled:opacity-50',
             'min-h-[120px] resize-y',
-            error && 'border-red-500 focus:border-red-500 focus:ring-red-500/10',
+            error && 'border-black/30 focus:border-green-600 focus:ring-green-600/15',
             className
           )}
           ref={ref}
           {...props}
         />
-        {error && <p className="mt-1.5 text-sm text-red-600">{error}</p>}
+        {error && <p className="mt-1.5 text-sm text-black/70">{error}</p>}
       </div>
     );
   }

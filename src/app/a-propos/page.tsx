@@ -10,6 +10,8 @@ import Link from 'next/link';
 export default function AboutPage() {
   const { t } = useLanguage();
 
+  const bookingUrl = siteConfig.booking.calendlyUrl;
+
   const values = [
     {
       icon: Shield,
@@ -30,91 +32,121 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="py-16 lg:py-24">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl sm:text-5xl font-bold text-stone-900 mb-4">
-            {t.about.title}
-          </h1>
-          <p className="text-xl text-stone-600">{t.about.subtitle}</p>
-        </div>
+    <div>
+      {/* Hero */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="text-green-700 font-medium mb-3 tracking-wide uppercase text-sm">
+                {siteConfig.credentials}
+              </p>
+              <h1 className="text-4xl sm:text-5xl font-semibold text-black leading-tight">
+                {t.about.title}
+              </h1>
+              <p className="mt-5 text-lg text-black/70 max-w-xl">
+                {t.about.subtitle}
+              </p>
 
-        {/* Bio */}
-        <Card className="mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold text-stone-900 mb-4">
-            {t.about.bioTitle}
-          </h2>
-          <p className="text-lg text-stone-600 leading-relaxed">
-            {t.about.bioText}
-          </p>
-        </Card>
+              <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                <a href={bookingUrl} target="_blank" rel="noreferrer">
+                  <Button size="lg">{t.common.bookNow}</Button>
+                </a>
+                <Link href="/contact">
+                  <Button variant="outline" size="lg">
+                    {t.common.contactUs}
+                  </Button>
+                </Link>
+              </div>
+            </div>
 
-        {/* Education */}
-        <Card className="mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold text-stone-900 mb-4">
-            {t.about.educationTitle}
-          </h2>
-          <div className="space-y-4">
-            <div className="flex items-start gap-3">
-              <GraduationCap className="w-6 h-6 text-stone-700 mt-1 flex-shrink-0" />
-              <div>
-                <p className="font-medium text-stone-900">
-                  {siteConfig.credentials}
-                </p>
-                <p className="text-stone-600">{t.about.educationText}</p>
+            <div>
+              <div className="rounded-3xl border border-black/10 bg-white p-3">
+                <div
+                  className="rounded-2xl bg-center bg-cover h-[380px]"
+                  style={{ backgroundImage: "url('/hero-waiting-room.svg')" }}
+                  aria-hidden="true"
+                />
               </div>
             </div>
           </div>
-        </Card>
+        </div>
+      </section>
 
-        {/* Approach */}
-        <Card className="mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold text-stone-900 mb-4">
-            {t.about.approachTitle}
-          </h2>
-          <p className="text-lg text-stone-600 leading-relaxed">
-            {t.about.approachText}
-          </p>
-        </Card>
+      {/* Content */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+          <Card>
+            <h2 className="text-2xl sm:text-3xl font-semibold text-black mb-4">
+              {t.about.bioTitle}
+            </h2>
+            <p className="text-lg text-black/70 leading-relaxed">
+              {t.about.bioText}
+            </p>
+          </Card>
 
-        {/* Values */}
-        <div className="mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold text-stone-900 mb-8 text-center">
-            {t.about.valuesTitle}
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {values.map((value, index) => (
-              <Card key={index} className="text-center">
-                <div className="w-12 h-12 bg-teal-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <value.icon className="w-6 h-6 text-teal-700" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <Card>
+              <h2 className="text-2xl font-semibold text-black mb-4">
+                {t.about.educationTitle}
+              </h2>
+              <div className="flex items-start gap-3">
+                <GraduationCap className="w-6 h-6 text-green-700 mt-1 flex-shrink-0" />
+                <div>
+                  <p className="font-medium text-black">{siteConfig.credentials}</p>
+                  <p className="text-black/70">{t.about.educationText}</p>
                 </div>
-                <p className="font-semibold text-stone-900">{value.title}</p>
-              </Card>
-            ))}
-          </div>
-        </div>
+              </div>
+            </Card>
 
-        {/* CTA */}
-        <div className="text-center bg-stone-50 rounded-2xl p-8">
-          <h2 className="text-2xl font-bold text-stone-900 mb-4">
-            Prêt à commencer ?
-          </h2>
-          <p className="text-stone-600 mb-6">
-            Contactez-moi pour discuter de vos besoins et planifier une première rencontre.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/prendre-rendez-vous">
-              <Button size="lg">{t.common.bookNow}</Button>
-            </Link>
-            <Link href="/cabinet-contact">
-              <Button variant="outline" size="lg">
-                {t.common.contactUs}
-              </Button>
-            </Link>
+            <Card>
+              <h2 className="text-2xl font-semibold text-black mb-4">
+                {t.about.approachTitle}
+              </h2>
+              <p className="text-black/70 leading-relaxed">{t.about.approachText}</p>
+            </Card>
+          </div>
+
+          <div>
+            <h2 className="text-2xl sm:text-3xl font-semibold text-black mb-6">
+              {t.about.valuesTitle}
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {values.map((value, index) => (
+                <Card key={index} className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-green-50 rounded-full flex items-center justify-center flex-shrink-0 border border-black/10">
+                      <value.icon className="w-6 h-6 text-green-700" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-black">{value.title}</p>
+                    </div>
+                  </div>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          <div className="rounded-2xl border border-black/10 bg-green-50 p-10 text-center">
+            <h2 className="text-2xl sm:text-3xl font-semibold text-black">
+              Prêt à commencer ?
+            </h2>
+            <p className="mt-3 text-lg text-black/70 max-w-2xl mx-auto">
+              Contactez-moi pour discuter de vos besoins et planifier une première rencontre.
+            </p>
+            <div className="mt-7 flex flex-col sm:flex-row gap-4 justify-center">
+              <a href={bookingUrl} target="_blank" rel="noreferrer">
+                <Button size="lg">{t.common.bookNow}</Button>
+              </a>
+              <Link href="/contact">
+                <Button variant="outline" size="lg">
+                  {t.common.contactUs}
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

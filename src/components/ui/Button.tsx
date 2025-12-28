@@ -15,13 +15,13 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
           'disabled:pointer-events-none disabled:opacity-50',
           {
-            'bg-teal-600 text-white hover:bg-teal-700 focus-visible:ring-teal-600':
+            'bg-green-600 text-white hover:bg-green-700 focus-visible:ring-green-600':
               variant === 'primary',
-            'bg-stone-100 text-stone-900 hover:bg-stone-200 focus-visible:ring-stone-500':
+            'bg-green-50 text-black hover:bg-green-100 focus-visible:ring-green-600':
               variant === 'secondary',
-            'border-2 border-teal-600 text-teal-700 hover:bg-teal-50 focus-visible:ring-teal-600':
+            'border-2 border-green-600 text-green-700 hover:bg-green-50 focus-visible:ring-green-600':
               variant === 'outline',
-            'text-stone-700 hover:bg-stone-100 focus-visible:ring-stone-500':
+            'text-black hover:bg-green-50 focus-visible:ring-green-600':
               variant === 'ghost',
           },
           {
