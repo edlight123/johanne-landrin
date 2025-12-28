@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/lib/i18n/LanguageProvider";
+import ErrorBoundary from "@/components/ErrorBoundary";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { siteConfig } from "@/lib/siteConfig";
@@ -38,13 +39,15 @@ export default function RootLayout({
   return (
     <html lang="fr" className={inter.variable}>
       <body className="antialiased bg-slate-50 text-slate-900">
-        <LanguageProvider>
-          <div className="flex flex-col min-h-screen">
-            <Header />
-            <main className="flex-1">{children}</main>
-            <Footer />
-          </div>
-        </LanguageProvider>
+        <ErrorBoundary>
+          <LanguageProvider>
+            <div className="flex flex-col min-h-screen">
+              <Header />
+              <main className="flex-1">{children}</main>
+              <Footer />
+            </div>
+          </LanguageProvider>
+        </ErrorBoundary>
       </body>
     </html>
   );
