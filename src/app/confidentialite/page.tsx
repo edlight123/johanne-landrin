@@ -46,8 +46,8 @@ export default function PrivacyPage() {
           {sections.map((section, index) => (
             <Card key={index}>
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-green-50 border border-black/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <section.icon className="w-6 h-6 text-green-700" />
+                <div className="w-12 h-12 bg-teal-50 border border-black/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <section.icon className="w-6 h-6 text-teal-700" />
                 </div>
                 <div className="flex-1">
                   <h2 className="text-2xl font-semibold text-black mb-3">

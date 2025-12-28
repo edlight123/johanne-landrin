@@ -47,11 +47,19 @@ export default function ServicesPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-16 lg:py-24 bg-white overflow-hidden">
+        <div className="absolute inset-0" aria-hidden="true">
+          <div
+            className="absolute inset-0 bg-center bg-cover"
+            style={{ backgroundImage: "url('/hero-reception.jpg')" }}
+          />
+          <div className="absolute inset-0 bg-white/75" />
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-green-700 font-medium mb-3 tracking-wide uppercase text-sm">
+              <p className="text-teal-700 font-medium mb-3 tracking-wide uppercase text-sm">
                 {siteConfig.credentials}
               </p>
               <h1 className="text-4xl sm:text-5xl font-semibold text-black leading-tight">
@@ -71,10 +79,10 @@ export default function ServicesPage() {
             </div>
 
             <div>
-              <div className="rounded-3xl border border-black/10 bg-white p-3">
+              <div className="rounded-3xl border border-black/10 bg-white/80 backdrop-blur-sm p-3">
                 <div
                   className="rounded-2xl bg-center bg-cover h-[320px]"
-                  style={{ backgroundImage: "url('/hero-waiting-room.svg')" }}
+                  style={{ backgroundImage: "url('/hero-reception.jpg')" }}
                   aria-hidden="true"
                 />
               </div>
@@ -93,8 +101,8 @@ export default function ServicesPage() {
                 <div key={service.id} id={service.id} className="scroll-mt-28">
                   <Card hover className="h-full">
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-green-50 rounded-full flex items-center justify-center flex-shrink-0 border border-black/10">
-                        <service.icon className="w-6 h-6 text-green-700" />
+                      <div className="w-12 h-12 bg-teal-50 rounded-full flex items-center justify-center flex-shrink-0 border border-black/10">
+                        <service.icon className="w-6 h-6 text-teal-700" />
                       </div>
                       <div>
                         <h2 className="text-xl font-semibold text-black">
@@ -108,21 +116,21 @@ export default function ServicesPage() {
 
                     <div className="mt-6 space-y-4">
                       <div className="flex items-start gap-3">
-                        <Users className="w-5 h-5 text-green-700 mt-0.5 flex-shrink-0" />
+                        <Users className="w-5 h-5 text-teal-700 mt-0.5 flex-shrink-0" />
                         <div>
                           <p className="font-medium text-black">{t.services.individual.forWho}</p>
                           <p className="text-black/70">{service.forWho}</p>
                         </div>
                       </div>
                       <div className="flex items-start gap-3">
-                        <MapPin className="w-5 h-5 text-green-700 mt-0.5 flex-shrink-0" />
+                        <MapPin className="w-5 h-5 text-teal-700 mt-0.5 flex-shrink-0" />
                         <div>
                           <p className="font-medium text-black">{t.services.individual.format}</p>
                           <p className="text-black/70">{service.format}</p>
                         </div>
                       </div>
                       <div className="flex items-start gap-3">
-                        <Clock className="w-5 h-5 text-green-700 mt-0.5 flex-shrink-0" />
+                        <Clock className="w-5 h-5 text-teal-700 mt-0.5 flex-shrink-0" />
                         <div>
                           <p className="font-medium text-black">{t.services.individual.duration}</p>
                           <p className="text-black/70">{service.duration}</p>
@@ -144,8 +152,8 @@ export default function ServicesPage() {
             <Card>
               <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-green-50 rounded-full flex items-center justify-center flex-shrink-0 border border-black/10">
-                    <BookOpen className="w-6 h-6 text-green-700" />
+                  <div className="w-12 h-12 bg-teal-50 rounded-full flex items-center justify-center flex-shrink-0 border border-black/10">
+                    <BookOpen className="w-6 h-6 text-teal-700" />
                   </div>
                   <div>
                     <h2 className="text-xl font-semibold text-black">{t.services.workshops.title}</h2>
@@ -159,7 +167,7 @@ export default function ServicesPage() {
             </Card>
           </div>
 
-          <div className="mt-16 rounded-2xl border border-black/10 bg-green-50 p-10 text-center">
+          <div className="mt-16 rounded-2xl border border-black/10 bg-teal-50 p-10 text-center">
             <h2 className="text-2xl sm:text-3xl font-semibold text-black">
               Commencez votre parcours aujourd'hui
             </h2>

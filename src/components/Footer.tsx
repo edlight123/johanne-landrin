@@ -101,7 +101,7 @@ export default function Footer() {
                   href={siteConfig.social.facebook}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 text-black/70 hover:text-black hover:bg-green-50 rounded-lg transition-colors"
+                  className="p-2 text-black/70 hover:text-black hover:bg-teal-50 rounded-lg transition-colors"
                   aria-label="Facebook"
                 >
                   <Facebook size={20} />
@@ -112,7 +112,7 @@ export default function Footer() {
                   href={siteConfig.social.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 text-black/70 hover:text-black hover:bg-green-50 rounded-lg transition-colors"
+                  className="p-2 text-black/70 hover:text-black hover:bg-teal-50 rounded-lg transition-colors"
                   aria-label="Instagram"
                 >
                   <Instagram size={20} />
@@ -123,7 +123,7 @@ export default function Footer() {
                   href={siteConfig.social.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 text-black/70 hover:text-black hover:bg-green-50 rounded-lg transition-colors"
+                  className="p-2 text-black/70 hover:text-black hover:bg-teal-50 rounded-lg transition-colors"
                   aria-label="LinkedIn"
                 >
                   <Linkedin size={20} />
@@ -135,7 +135,7 @@ export default function Footer() {
 
         {/* Emergency Notice */}
         <div className="mt-8 pt-8 border-t border-black/10">
-          <p className="text-sm text-black/80 bg-green-50 border border-black/10 rounded-lg p-4">
+          <p className="text-sm text-black/80 bg-teal-50 border border-black/10 rounded-lg p-4">
             <strong className="text-black">{t.emergency.title}:</strong> {t.footer.emergency}
           </p>
         </div>

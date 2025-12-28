@@ -86,7 +86,7 @@ export default function ContactPage() {
         <div className="absolute inset-0">
           <div
             className="absolute inset-0 bg-center bg-cover"
-            style={{ backgroundImage: "url('/hero-waiting-room.svg')" }}
+              style={{ backgroundImage: "url('/hero-reception.jpg')" }}
             aria-hidden="true"
           />
           <div className="absolute inset-0 bg-white/80" aria-hidden="true" />
@@ -95,7 +95,7 @@ export default function ContactPage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div>
-              <p className="text-green-700 font-medium mb-3 tracking-wide uppercase text-sm">
+              <p className="text-teal-700 font-medium mb-3 tracking-wide uppercase text-sm">
                 {siteConfig.credentials}
               </p>
               <h1 className="text-4xl sm:text-5xl font-semibold text-black leading-tight">
@@ -111,7 +111,7 @@ export default function ContactPage() {
                   className="rounded-2xl border border-black/10 bg-white/90 p-5 hover:bg-white transition-colors"
                 >
                   <div className="flex items-center gap-3">
-                    <Phone className="w-5 h-5 text-green-700" />
+                    <Phone className="w-5 h-5 text-teal-700" />
                     <div>
                       <p className="text-sm text-black/60">Téléphone</p>
                       <p className="font-medium text-black">{siteConfig.contact.phone}</p>
@@ -124,7 +124,7 @@ export default function ContactPage() {
                   className="rounded-2xl border border-black/10 bg-white/90 p-5 hover:bg-white transition-colors"
                 >
                   <div className="flex items-center gap-3">
-                    <Mail className="w-5 h-5 text-green-700" />
+                    <Mail className="w-5 h-5 text-teal-700" />
                     <div>
                       <p className="text-sm text-black/60">E-mail</p>
                       <p className="font-medium text-black break-all">{siteConfig.contact.email}</p>
@@ -139,7 +139,7 @@ export default function ContactPage() {
                   className="rounded-2xl border border-black/10 bg-white/90 p-5 hover:bg-white transition-colors"
                 >
                   <div className="flex items-center gap-3">
-                    <Users className="w-5 h-5 text-green-700" />
+                    <Users className="w-5 h-5 text-teal-700" />
                     <div>
                       <p className="text-sm text-black/60">WhatsApp</p>
                       <p className="font-medium text-black">{siteConfig.contact.whatsapp}</p>
@@ -169,7 +169,7 @@ export default function ContactPage() {
             <div className="space-y-8">
               <Card>
                 <h2 className="text-2xl font-semibold text-black mb-6 flex items-center gap-3">
-                  <MapPin className="w-6 h-6 text-green-700" />
+                  <MapPin className="w-6 h-6 text-teal-700" />
                   {t.office.locationTitle}
                 </h2>
                 <div className="space-y-3">
@@ -194,7 +194,7 @@ export default function ContactPage() {
 
               <Card>
                 <h2 className="text-2xl font-semibold text-black mb-6 flex items-center gap-3">
-                  <Clock className="w-6 h-6 text-green-700" />
+                  <Clock className="w-6 h-6 text-teal-700" />
                   {t.office.hoursTitle}
                 </h2>
                 <p className="text-lg text-black/70">{siteConfig.office.hours}</p>
@@ -209,14 +209,14 @@ export default function ContactPage() {
                     href={`tel:${siteConfig.contact.phone}`}
                     className="flex items-center gap-3 text-black/70 hover:text-black transition-colors"
                   >
-                    <Phone className="w-5 h-5 text-green-700" />
+                    <Phone className="w-5 h-5 text-teal-700" />
                     <span className="text-lg">{siteConfig.contact.phone}</span>
                   </a>
                   <a
                     href={`mailto:${siteConfig.contact.email}`}
                     className="flex items-center gap-3 text-black/70 hover:text-black transition-colors"
                   >
-                    <Mail className="w-5 h-5 text-green-700" />
+                    <Mail className="w-5 h-5 text-teal-700" />
                     <span className="text-lg break-all">{siteConfig.contact.email}</span>
                   </a>
                 </div>
@@ -312,9 +312,9 @@ export default function ContactPage() {
                   {audiences.map((audience) => (
                     <div
                       key={audience.title}
-                      className="rounded-xl border border-black/10 bg-green-50 p-4 text-center"
+                      className="rounded-xl border border-black/10 bg-teal-50 p-4 text-center"
                     >
-                      <audience.icon className="w-6 h-6 text-green-700 mx-auto mb-2" />
+                      <audience.icon className="w-6 h-6 text-teal-700 mx-auto mb-2" />
                       <p className="font-medium text-black">{audience.title}</p>
                     </div>
                   ))}

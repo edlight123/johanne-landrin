@@ -83,7 +83,7 @@ export default function HomePage() {
         <div className="absolute inset-0">
           <div
             className="absolute inset-0 bg-center bg-cover"
-            style={{ backgroundImage: "url('/hero-waiting-room.svg')" }}
+            style={{ backgroundImage: "url('/hero-reception.jpg')" }}
             aria-hidden="true"
           />
           <div className="absolute inset-0 bg-white/70" aria-hidden="true" />
@@ -91,7 +91,7 @@ export default function HomePage() {
 
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl">
-            <p className="text-green-700 font-medium mb-3 tracking-wide uppercase text-sm">
+            <p className="text-teal-700 font-medium mb-3 tracking-wide uppercase text-sm">
               {siteConfig.credentials}
             </p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-black leading-tight">
@@ -125,7 +125,7 @@ export default function HomePage() {
       {/* Professional Statement */}
       <section className="py-14 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="rounded-2xl border border-black/10 bg-green-50 p-8 sm:p-10">
+          <div className="rounded-2xl border border-black/10 bg-teal-50 p-8 sm:p-10">
             <p className="text-base sm:text-lg text-black/70 leading-relaxed">
               {t.home.heroSubtitle}
             </p>
@@ -153,7 +153,7 @@ export default function HomePage() {
               >
                 <Card hover className="h-full">
                   <div className="mb-5">
-                    <service.icon className="w-9 h-9 text-green-600" />
+                    <service.icon className="w-9 h-9 text-teal-600" />
                   </div>
                   <h3 className="text-xl font-semibold text-black mb-3">
                     {service.title}
@@ -171,7 +171,7 @@ export default function HomePage() {
       {/* CTA Section */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="rounded-2xl border border-black/10 bg-green-50 p-10 text-center">
+          <div className="rounded-2xl border border-black/10 bg-teal-50 p-10 text-center">
             <h2 className="text-2xl sm:text-3xl font-semibold text-black">
               Prêt à commencer votre parcours?
             </h2>
@@ -203,7 +203,7 @@ export default function HomePage() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {themes.map((theme: string) => (
-              <div key={theme} className="p-6 bg-green-50 rounded-xl border border-black/10">
+              <div key={theme} className="p-6 bg-teal-50 rounded-xl border border-black/10">
                 <p className="font-medium text-black">{theme}</p>
               </div>
             ))}

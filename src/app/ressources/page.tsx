@@ -70,7 +70,7 @@ export default function ResourcesPage() {
               placeholder={t.resources.searchPlaceholder}
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-12 pr-4 py-3 rounded-lg border border-black/20 focus:border-green-600 focus:outline-none focus:ring-2 focus:ring-green-600/10"
+              className="w-full pl-12 pr-4 py-3 rounded-lg border border-black/20 focus:border-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-600/10"
             />
           </div>
 
@@ -80,8 +80,8 @@ export default function ResourcesPage() {
               onClick={() => setSelectedTag('')}
               className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                 !selectedTag
-                  ? 'bg-green-600 text-white'
-                  : 'bg-green-50 text-black/70 hover:bg-green-100'
+                  ? 'bg-teal-600 text-white'
+                  : 'bg-teal-50 text-black/70 hover:bg-teal-100'
               }`}
             >
               {t.resources.allTopics}
@@ -92,8 +92,8 @@ export default function ResourcesPage() {
                 onClick={() => setSelectedTag(tag)}
                 className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                   selectedTag === tag
-                    ? 'bg-green-600 text-white'
-                    : 'bg-green-50 text-black/70 hover:bg-green-100'
+                    ? 'bg-teal-600 text-white'
+                    : 'bg-teal-50 text-black/70 hover:bg-teal-100'
                 }`}
               >
                 {tag}
@@ -113,7 +113,7 @@ export default function ResourcesPage() {
                       {post.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="px-2 py-1 bg-green-50 text-black/70 text-xs font-medium rounded border border-black/10"
+                          className="px-2 py-1 bg-teal-50 text-black/70 text-xs font-medium rounded border border-black/10"
                         >
                           {tag}
                         </span>
@@ -141,7 +141,7 @@ export default function ResourcesPage() {
         )}
 
         {/* Info Note */}
-        <Card className="mt-12 bg-green-50 max-w-3xl mx-auto">
+        <Card className="mt-12 bg-teal-50 max-w-3xl mx-auto">
           <p className="text-black/70 text-center">
             <strong>Note:</strong> Ces ressources sont à titre informatif seulement et ne remplacent pas une consultation professionnelle.
           </p>

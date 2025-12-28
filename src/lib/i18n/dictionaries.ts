@@ -185,17 +185,33 @@ export const dictionaries = {
     about: {
       title: 'À propos',
       subtitle: 'Mon parcours et mon approche',
-      bioTitle: 'Qui suis-je ?',
-      bioText: 'Psychologue clinicienne diplômée, je suis passionnée par l\'accompagnement des personnes dans leur cheminement vers un mieux-être psychologique durable. Mon approche allie écoute empathique, rigueur clinique et respect profond de l\'unicité de chaque personne.',
+
+      // Bio (split for layout)
+      bioP1: 'Johanne Landrin est psychologue clinicienne à Pétion-Ville, en Haïti. Elle accompagne des personnes qui souhaitent mieux comprendre leurs émotions, traverser une période difficile ou retrouver un équilibre au quotidien.',
+      bioP2: 'Dans un cadre confidentiel, respectueux et sans jugement, elle propose un accompagnement centré sur la personne, adapté à votre rythme et à votre réalité. Les consultations peuvent aborder, entre autres, la gestion du stress, les relations familiales et affectives, l\'estime de soi, ou encore les transitions de vie.',
+      bioP3: 'Johanne Landrin reçoit au cabinet (Berthé, Pétion-Ville) et propose également des séances en ligne selon les besoins. Elle intervient aussi auprès d\'organisations (écoles, associations, entreprises) à travers des ateliers et conférences autour du bien-être psychologique, de la communication et des dynamiques familiales.',
+
       educationTitle: 'Formation',
-      educationText: '[Détails de formation à ajouter]',
+      educationIntro: 'Parcours universitaire et formations complémentaires.',
       approachTitle: 'Mon approche',
       approachText: 'J\'intègre différentes approches thérapeutiques (cognitive-comportementale, humaniste, systémique) selon les besoins uniques de chaque client. Mon objectif est de créer un espace sécurisant où vous pouvez explorer vos difficultés, identifier vos ressources et construire des solutions adaptées.',
-      valuesTitle: 'Mes valeurs',
-      value1: 'Confidentialité absolue',
-      value2: 'Respect et non-jugement',
-      value3: 'Approche centrée sur la personne',
-      value4: 'Éthique professionnelle',
+      frameText: 'Confidentialité, respect, et un espace sans jugement — à votre rythme.',
+
+      certificationsTitle: 'Licences & certifications',
+      certificationsIntro: 'Références professionnelles (si applicable).',
+
+      themesTitle: 'Thématiques abordées',
+      themesSubtitle: 'Quelques exemples de sujets travaillés en consultation (liste non exhaustive).',
+
+      offer1Title: 'Consultations au cabinet',
+      offer1Text: 'Au cabinet à Berthé, Pétion-Ville, dans un cadre confidentiel.',
+      offer2Title: 'Séances en ligne',
+      offer2Text: 'Selon vos besoins et possibilités, en toute discrétion.',
+      offer3Title: 'Ateliers & conférences',
+      offer3Text: 'Interventions pour écoles, associations et entreprises.',
+
+      ctaTitle: 'Prêt(e) à commencer ?',
+      ctaText: 'Contactez-moi pour discuter de vos besoins et planifier une première rencontre.',
     },
     
     // FAQ Page
@@ -436,17 +452,31 @@ export const dictionaries = {
     about: {
       title: 'Konsènan',
       subtitle: 'Chemen mwen ak apwòch mwen',
-      bioTitle: 'Kiyès mwen ye?',
-      bioText: 'Sikològ klinik diplome, mwen pasyone pa akonpayman moun nan chemen yo vè yon byennèt sikolojik dirab. Apwòch mwen melanje koute anpatik, rigè klinik ak respè pwofon pou inikalite chak moun.',
+      bioP1: 'Johanne Landrin se yon sikològ klinik nan Pétion-Ville, Ayiti. Li akonpaye moun ki vle pi byen konprann emosyon yo, travèse yon peryòd difisil, oswa jwenn ekilib nan lavi chak jou.',
+      bioP2: 'Nan yon kad konfidansyèl, respèkte, san jijman, li pwopoze yon akonpayman ki santre sou moun nan, adapte ak rit ou ak reyalite ou. Konsiltasyon yo ka abòde, pami lòt bagay, jesyon estrès, relasyon familyal ak afektif, estim tèt ou, oswa tranzisyon lavi.',
+      bioP3: 'Johanne Landrin resevwa nan kabinè a (Berthé, Pétion-Ville) epi li pwopoze tou seyans anliy selon bezwen yo. Li entèvni tou ak òganizasyon (lekòl, asosyasyon, antrepriz) atravè atelye ak konferans sou byennèt sikolojik, kominikasyon ak dinamik familyal.',
+
       educationTitle: 'Fòmasyon',
-      educationText: '[Detay fòmasyon pou ajoute]',
+      educationIntro: 'Chemen inivèsite ak fòmasyon konplemantè.',
       approachTitle: 'Apwòch mwen',
       approachText: 'Mwen entegre diferan apwòch terapetik (kognitif-konpòtmantal, imanis, sistemik) selon bezwen inik chak kliyan. Objektif mwen se kreye yon espas sekirite kote ou ka eksplore difikilte ou, idantifye resous ou epi konstwi solisyon adapte.',
-      valuesTitle: 'Valè mwen',
-      value1: 'Konfidansyalite absoli',
-      value2: 'Respè san jijman',
-      value3: 'Apwòch santre sou moun nan',
-      value4: 'Etik pwofesyonèl',
+      frameText: 'Konfidansyalite, respè, epi yon espas san jijman — selon rit ou.',
+
+      certificationsTitle: 'Lisans & sètifikasyon',
+      certificationsIntro: 'Referans pwofesyonèl (si sa aplikab).',
+
+      themesTitle: 'Tematik yo trete',
+      themesSubtitle: 'Kèk egzanp sijè nou ka travay ansanm (lis la pa fini).',
+
+      offer1Title: 'Konsiltasyon nan kabinè',
+      offer1Text: 'Nan kabinè a nan Berthé, Pétion-Ville, nan yon kad konfidansyèl.',
+      offer2Title: 'Seyans anliy',
+      offer2Text: 'Selon bezwen ou ak posiblite ou, ak anpil diskresyon.',
+      offer3Title: 'Atelye & konferans',
+      offer3Text: 'Entèvansyon pou lekòl, asosyasyon, ak antrepriz.',
+
+      ctaTitle: 'Ou pare pou kòmanse?',
+      ctaText: 'Kontakte m pou n pale de bezwen ou epi planifye yon premye rankont.',
     },
     
     // FAQ Page

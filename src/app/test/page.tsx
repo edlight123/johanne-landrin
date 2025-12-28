@@ -10,7 +10,7 @@ export default function TestPage() {
         If you can see this, the deployment is working.
       </p>
       <p className="text-base mt-6">
-        <Link href="/" className="text-green-700 font-medium underline">
+        <Link href="/" className="text-teal-700 font-medium underline">
           Go to Home
         </Link>
       </p>

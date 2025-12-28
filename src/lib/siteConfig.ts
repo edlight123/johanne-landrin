@@ -3,6 +3,42 @@ export const siteConfig = {
   name: "Johanne Landrin",
   title: "Psychologue clinicienne",
   credentials: "M.A. en Psychologie Clinique",
+  profile: {
+    imageUrl: "/johanne-landrin.svg",
+  },
+
+  education: [
+    {
+      institution: 'Walden University',
+      degree:
+        'Master Clinical Psychology - MBA, Health/Medical Psychology',
+      years: '2012 - 2014',
+    },
+    {
+      institution: 'Webster University',
+      degree: 'Master of Business Administration (MBA), General Studies',
+      years: '2000 - 2001',
+    },
+    {
+      institution: 'Saint Leo University',
+      degree: 'Bachelor of Arts (B.A.), Psychology',
+      years: '1997 - 1999',
+    },
+    {
+      institution: 'University of Technology, Jamaica',
+      degree: 'Associate of Arts (A.A.), Business Administration and Management, General',
+      years: '1994 - 1996',
+    },
+    {
+      institution: 'York University',
+      degree: 'EFST (Emotion Focused Skills Training)',
+      details: 'Toronto, Canada',
+    },
+  ],
+
+  certifications: [
+    'MBTI Certified — The Myers & Briggs Foundation (Issued Nov 2016) — Credential ID: MBTI-2016-T754151',
+  ],
   
   // Contact Information
   contact: {
@@ -13,8 +49,8 @@ export const siteConfig = {
   
   // Office Information (Placeholders)
   office: {
-    address: "Port-au-Prince, Haïti",
-    detailedAddress: "Adresse complète à configurer",
+    address: "Berthé, Pétion-Ville, Haïti",
+    detailedAddress: "Berthé, Pétion-Ville, Haïti",
     hours: "Lundi - Vendredi: 9h00 - 17h00",
     mapEmbedUrl: "", // Add Google Maps embed URL here
   },
@@ -58,7 +94,7 @@ export const siteConfig = {
   // SEO
   seo: {
     title: "Johanne Landrin | Psychologue clinicienne en Haïti",
-    description: "Psychothérapie et accompagnement psychologique à Port-au-Prince. Consultations individuelles, ateliers et conférences pour particuliers et organisations.",
+    description: "Psychothérapie et accompagnement psychologique à Pétion-Ville, Haïti. Consultations au cabinet et en ligne, ainsi que des ateliers et conférences pour particuliers et organisations.",
     keywords: ["psychologue", "Haiti", "Port-au-Prince", "psychothérapie", "santé mentale", "consultation", "ateliers"],
     url: "https://johannelandrin.com", // Update with actual domain
   },

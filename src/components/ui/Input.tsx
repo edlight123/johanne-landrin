@@ -18,7 +18,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
             className="block text-sm font-medium text-black/70 mb-1.5"
           >
             {label}
-            {props.required && <span className="text-green-700 ml-1">*</span>}
+            {props.required && <span className="text-teal-700 ml-1">*</span>}
           </label>
         )}
         <input
@@ -26,9 +26,9 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           className={cn(
             'w-full rounded-lg border border-black/15 bg-white px-4 py-2.5',
             'text-black placeholder:text-black/40',
-            'focus:border-green-600 focus:outline-none focus:ring-2 focus:ring-green-600/15',
+            'focus:border-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-600/15',
             'disabled:cursor-not-allowed disabled:opacity-50',
-            error && 'border-black/30 focus:border-green-600 focus:ring-green-600/15',
+            error && 'border-black/30 focus:border-teal-600 focus:ring-teal-600/15',
             className
           )}
           ref={ref}
