@@ -13,8 +13,6 @@ export default function ServicesPage() {
   const bookingUrl = siteConfig.booking.calendlyUrl;
 
   const services = getServicesCatalog(t);
-  const publicLabel = t.services.labels?.public ?? 'Public';
-  const formatLabel = t.services.labels?.format ?? 'Format';
 
   return (
     <div className="bg-white">
@@ -45,45 +43,32 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {services.map((service) => (
-              <Card
-                key={service.slug}
-                hover
-                className="rounded-lg bg-white border border-black/10 shadow-sm hover:shadow-md transition-shadow"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-teal-50 rounded-full flex items-center justify-center flex-shrink-0 border border-black/10">
-                    <service.icon className="w-6 h-6 text-teal-700" />
-                  </div>
-                  <div className="min-w-0">
-                    <h2 className="text-xl font-semibold text-black">
-                      {service.title}
-                    </h2>
-                    <p className="mt-2 text-black/70 leading-relaxed line-clamp-1">
-                      {service.description}
-                    </p>
-
-                    <div className="mt-5 flex flex-wrap gap-2 text-sm">
-                      <span className="inline-flex items-center rounded-lg border border-black/10 bg-white px-3 py-1 text-black/70">
-                        <span className="text-black/50 mr-2">{formatLabel}</span>
-                        <span className="text-black/80">{service.formatLabel}</span>
-                      </span>
-                      <span className="inline-flex items-center rounded-lg border border-black/10 bg-white px-3 py-1 text-black/70">
-                        <span className="text-black/50 mr-2">{publicLabel}</span>
-                        <span className="text-black/80">{service.audienceLabel}</span>
-                      </span>
+              <Link key={service.slug} href={`/services/${service.slug}`} className="block">
+                <Card
+                  hover
+                  className="rounded-lg bg-white border border-black/10 shadow-sm hover:shadow-md transition-shadow"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-teal-50 rounded-full flex items-center justify-center flex-shrink-0 border border-black/10">
+                      <service.icon className="w-6 h-6 text-teal-700" />
                     </div>
+                    <div className="min-w-0">
+                      <h2 className="text-xl font-semibold text-black">
+                        {service.title}
+                      </h2>
+                      <p className="mt-2 text-black/70 leading-relaxed">
+                        {service.description}
+                      </p>
 
-                    <div className="mt-6">
-                      <Link
-                        href={`/services/${service.slug}`}
-                        className="text-sm font-medium text-teal-700 hover:text-teal-800"
-                      >
-                        {t.services.learnMore ?? 'En savoir plus'}
-                      </Link>
+                      <ul className="mt-5 list-disc pl-5 space-y-1 text-sm text-black/70">
+                        {service.offerings.map((item) => (
+                          <li key={item}>{item}</li>
+                        ))}
+                      </ul>
                     </div>
                   </div>
-                </div>
-              </Card>
+                </Card>
+              </Link>
             ))}
           </div>
 
