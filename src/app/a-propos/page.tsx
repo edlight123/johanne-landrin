@@ -36,7 +36,7 @@ export default function AboutPage() {
       {/* Top section (3 columns) */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-[320px_1fr_360px] gap-8 lg:gap-10 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-[320px_1fr_360px] gap-8 lg:gap-x-10 lg:gap-y-6 items-start">
             {/* Column 1: photo */}
             <div className="flex flex-col items-center lg:items-start lg:row-start-1 lg:col-start-1">
               <div className="relative w-72 h-72 rounded-xl overflow-hidden border border-black/10 bg-teal-50">
