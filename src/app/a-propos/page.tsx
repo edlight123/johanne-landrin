@@ -83,36 +83,6 @@ export default function AboutPage() {
                 <p className="text-lg text-black/70 leading-relaxed">{t.about.bioP2}</p>
                 <p className="text-lg text-black/70 leading-relaxed">{t.about.bioP3}</p>
               </div>
-
-              <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <Card className="p-6">
-                  <div className="flex items-start gap-3">
-                    <HeartHandshake className="w-6 h-6 text-teal-700 mt-0.5" />
-                    <div>
-                      <p className="font-semibold text-black">{t.about.offer1Title}</p>
-                      <p className="mt-1 text-sm text-black/70">{t.about.offer1Text}</p>
-                    </div>
-                  </div>
-                </Card>
-                <Card className="p-6">
-                  <div className="flex items-start gap-3">
-                    <Globe className="w-6 h-6 text-teal-700 mt-0.5" />
-                    <div>
-                      <p className="font-semibold text-black">{t.about.offer2Title}</p>
-                      <p className="mt-1 text-sm text-black/70">{t.about.offer2Text}</p>
-                    </div>
-                  </div>
-                </Card>
-                <Card className="p-6">
-                  <div className="flex items-start gap-3">
-                    <Users className="w-6 h-6 text-teal-700 mt-0.5" />
-                    <div>
-                      <p className="font-semibold text-black">{t.about.offer3Title}</p>
-                      <p className="mt-1 text-sm text-black/70">{t.about.offer3Text}</p>
-                    </div>
-                  </div>
-                </Card>
-              </div>
             </div>
 
             {/* Column 3: education, certifications, specializations */}
@@ -168,6 +138,36 @@ export default function AboutPage() {
                 </div>
               </Card>
             </aside>
+          </div>
+
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <Card className="p-6">
+              <div className="flex items-start gap-3">
+                <HeartHandshake className="w-6 h-6 text-teal-700 mt-0.5" />
+                <div>
+                  <p className="font-semibold text-black">{t.about.offer1Title}</p>
+                  <p className="mt-1 text-sm text-black/70">{t.about.offer1Text}</p>
+                </div>
+              </div>
+            </Card>
+            <Card className="p-6">
+              <div className="flex items-start gap-3">
+                <Globe className="w-6 h-6 text-teal-700 mt-0.5" />
+                <div>
+                  <p className="font-semibold text-black">{t.about.offer2Title}</p>
+                  <p className="mt-1 text-sm text-black/70">{t.about.offer2Text}</p>
+                </div>
+              </div>
+            </Card>
+            <Card className="p-6">
+              <div className="flex items-start gap-3">
+                <Users className="w-6 h-6 text-teal-700 mt-0.5" />
+                <div>
+                  <p className="font-semibold text-black">{t.about.offer3Title}</p>
+                  <p className="mt-1 text-sm text-black/70">{t.about.offer3Text}</p>
+                </div>
+              </div>
+            </Card>
           </div>
         </div>
       </section>

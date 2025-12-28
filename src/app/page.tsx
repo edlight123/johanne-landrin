@@ -83,7 +83,7 @@ export default function HomePage() {
         <div className="absolute inset-0">
           <div
             className="absolute inset-0 bg-center bg-cover"
-            style={{ backgroundImage: "url('/hero-therapy-waiting-room.jpg')" }}
+            style={{ backgroundImage: "url('/office-4.png')" }}
             aria-hidden="true"
           />
           <div className="absolute inset-0 bg-black/35" aria-hidden="true" />

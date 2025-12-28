@@ -4,7 +4,7 @@ export const siteConfig = {
   title: "Psychologue clinicienne",
   credentials: "M.A. en Psychologie Clinique",
   profile: {
-    imageUrl: "/johanne-landrin.svg",
+    imageUrl: "/johanne-landrin.png",
   },
 
   education: [
