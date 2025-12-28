@@ -57,6 +57,15 @@ export const dictionaries = {
     services: {
       title: 'Services',
       subtitle: 'Accompagnement psychologique personnalisé',
+      viewDetails: 'Voir détails',
+      reserveLink: 'Réserver',
+      howItWorksTitle: 'Comment ça se passe ? ',
+      howItWorksStep1Title: 'Réserver',
+      howItWorksStep1Text: 'Choisissez un créneau via Calendly pour une première consultation.',
+      howItWorksStep2Title: 'Se rencontrer',
+      howItWorksStep2Text: 'Nous clarifions votre demande et définissons ensemble le cadre de travail.',
+      howItWorksStep3Title: 'Avancer',
+      howItWorksStep3Text: 'Nous construisons un accompagnement adapté, à votre rythme.',
       individual: {
         title: 'Consultation individuelle',
         description: 'Séances de psychothérapie en face à face pour adultes',
@@ -84,6 +93,9 @@ export const dictionaries = {
       workshops: {
         title: 'Ateliers et conférences',
         description: 'Interventions pour organisations, écoles et entreprises',
+        forWhoDetails: 'Organisations, écoles, associations, entreprises',
+        formatDetails: 'En présentiel ou en ligne (selon besoin)',
+        durationDetails: 'Variable selon l’intervention',
         link: 'Voir les ateliers',
       },
     },
@@ -327,6 +339,15 @@ export const dictionaries = {
     services: {
       title: 'Sèvis',
       subtitle: 'Akonpayman sikolojik pèsonalize',
+      viewDetails: 'Gade detay yo',
+      reserveLink: 'Rezève',
+      howItWorksTitle: 'Kijan sa fèt?',
+      howItWorksStep1Title: 'Rezève',
+      howItWorksStep1Text: 'Chwazi yon lè sou Calendly pou premye konsiltasyon an.',
+      howItWorksStep2Title: 'Rankontre',
+      howItWorksStep2Text: 'Nou klarifye demann ou epi mete kad travay la ansanm.',
+      howItWorksStep3Title: 'Avanse',
+      howItWorksStep3Text: 'Nou bati yon akonpayman adapte, selon rit ou.',
       individual: {
         title: 'Konsiltasyon endividyèl',
         description: 'Seyans sikoterapi fas a fas pou granmoun',
@@ -354,6 +375,9 @@ export const dictionaries = {
       workshops: {
         title: 'Atelye ak konferans',
         description: 'Entèvansyon pou òganizasyon, lekòl ak antrepriz',
+        forWhoDetails: 'Òganizasyon, lekòl, asosyasyon, antrepriz',
+        formatDetails: 'Nan pèsòn oswa anliy (selon bezwen)',
+        durationDetails: 'Varye selon entèvansyon an',
         link: 'Gade atelye yo',
       },
     },
