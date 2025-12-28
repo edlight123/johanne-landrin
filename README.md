@@ -142,3 +142,4 @@ npm run lint       # Linter
 ---
 
 **Développé avec ❤️ pour promouvoir la santé mentale en Haïti**
+# Trigger rebuild
