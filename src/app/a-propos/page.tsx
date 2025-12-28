@@ -36,6 +36,10 @@ export default function AboutPage() {
       {/* Top section (3 columns) */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-4xl sm:text-5xl font-semibold text-black leading-tight">
+            About {siteConfig.name}.
+          </h1>
+
           <div className="grid grid-cols-1 lg:grid-cols-[320px_1fr_360px] gap-8 lg:gap-x-10 lg:gap-y-6 items-start">
             {/* Column 1: photo */}
             <div className="flex flex-col items-center lg:items-start lg:row-start-1 lg:col-start-1">
@@ -71,14 +75,7 @@ export default function AboutPage() {
 
             {/* Column 2: bio */}
             <div className="lg:row-start-1 lg:col-start-2">
-              <h1 className="text-4xl sm:text-5xl font-semibold text-black leading-tight">
-                {siteConfig.name}
-              </h1>
-              <p className="mt-3 text-lg sm:text-xl text-black/70">
-                {siteConfig.title}
-              </p>
-
-              <div className="mt-8 space-y-5">
+              <div className="space-y-5">
                 <p className="text-lg text-black/70 leading-relaxed">{t.about.bioP1}</p>
                 <p className="text-lg text-black/70 leading-relaxed">{t.about.bioP2}</p>
                 <p className="text-lg text-black/70 leading-relaxed">{t.about.bioP3}</p>
