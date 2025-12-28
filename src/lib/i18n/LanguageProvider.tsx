@@ -14,10 +14,8 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [locale, setLocaleState] = useState<Locale>('fr');
   const [t, setT] = useState(() => getDictionary('fr'));
-  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
     // Load locale from localStorage only on client
     if (typeof window !== 'undefined') {
       const saved = localStorage.getItem('locale') as Locale | null;
