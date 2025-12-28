@@ -76,26 +76,29 @@ export default function HomePage() {
         }}
       />
 
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-b from-slate-100 to-white py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-stone-900 mb-6">
+      {/* Hero Section - Professional & Clean */}
+      <section className="relative bg-white py-20 lg:py-32">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-teal-700 font-medium mb-4 tracking-wide uppercase text-sm">
+              {siteConfig.credentials}
+            </p>
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-stone-900 mb-8 leading-tight">
               {t.home.heroTitle}
             </h1>
-            <p className="text-lg sm:text-xl text-stone-600 mb-8">
+            <p className="text-xl sm:text-2xl text-stone-600 mb-12 leading-relaxed max-w-3xl mx-auto">
               {t.home.heroSubtitle}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/prendre-rendez-vous">
-                <Button size="lg" className="w-full sm:w-auto">
+                <Button size="lg" className="w-full sm:w-auto px-8 py-4 text-lg">
                   {t.home.heroCTA}
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
-              <Link href="/ateliers-conferences">
-                <Button variant="outline" size="lg" className="w-full sm:w-auto">
-                  {t.home.heroSecondaryCTA}
+              <Link href="/a-propos">
+                <Button variant="outline" size="lg" className="w-full sm:w-auto px-8 py-4 text-lg">
+                  En savoir plus
                 </Button>
               </Link>
             </div>
@@ -103,142 +106,97 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-stone-900 mb-4">
-              {t.home.servicesTitle}
-            </h2>
-            <p className="text-lg text-stone-600 max-w-2xl mx-auto">
-              {t.home.servicesSubtitle}
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service) => (
-              <Link key={service.href} href={service.href}>
-                <Card hover className="h-full">
-                  <div className="flex flex-col items-center text-center">
-                    <div className="w-14 h-14 bg-stone-100 rounded-full flex items-center justify-center mb-4">
-                      <service.icon className="w-7 h-7 text-stone-900" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-stone-900 mb-2">
-                      {service.title}
-                    </h3>
-                    <p className="text-stone-600">{service.description}</p>
-                  </div>
-                </Card>
-              </Link>
-            ))}
-          </div>
+      {/* Professional Statement */}
+      <section className="py-16 bg-stone-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-lg sm:text-xl text-stone-700 leading-relaxed italic">
+            {t.home.heroSubtitle}
+          </p>
         </div>
       </section>
 
-      {/* Themes Section */}
-      <section className="py-16 lg:py-24 bg-stone-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-stone-900 mb-4">
-              {t.home.themesTitle}
+      {/* Services Section - Cleaner Grid */}
+      <section className="py-20 lg:py-28 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl sm:text-5xl font-bold text-stone-900 mb-6">
+              {t.home.servicesTitle}
             </h2>
-            <p className="text-lg text-stone-600 max-w-2xl mx-auto">
-              {t.home.themesSubtitle}
+            <p className="text-xl text-stone-600 max-w-3xl mx-auto">
+              {t.home.servicesSubtitle}
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {themes.map((theme, index) => (
-              <Card key={index} className="text-center">
-                <p className="font-medium text-stone-900">{theme}</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+            {services.map((service) => (
+              <Card key={service.title} className="p-8 hover:shadow-lg transition-shadow border border-stone-200">
+                <div className="mb-6">
+                  <service.icon className="w-10 h-10 text-teal-600" />
+                </div>
+                <h3 className="text-2xl font-semibold text-stone-900 mb-4">
+                  {service.title}
+                </h3>
+                <p className="text-stone-600 leading-relaxed">{service.description}</p>
               </Card>
             ))}
           </div>
         </div>
       </section>
 
-      {/* About Teaser */}
-      <section className="py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold text-stone-900 mb-6">
-              {t.home.aboutTitle}
-            </h2>
-            <p className="text-lg text-stone-600 mb-8">{t.home.aboutTeaser}</p>
-            <Link href="/a-propos">
-              <Button variant="outline">{t.common.learnMore}</Button>
-            </Link>
-          </div>
+      {/* CTA Section - Professional */}
+      <section className="py-20 bg-teal-600">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            Prêt à commencer votre parcours?
+          </h2>
+          <p className="text-xl text-teal-50 mb-8 max-w-2xl mx-auto">
+            Prenez rendez-vous dès aujourd'hui pour une consultation personnalisée.
+          </p>
+          <Link href="/prendre-rendez-vous">
+            <Button size="lg" variant="secondary" className="bg-white text-teal-700 hover:bg-stone-50 px-8 py-4 text-lg">
+              Prendre rendez-vous
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Button>
+          </Link>
         </div>
       </section>
 
-      {/* Office Teaser */}
-      <section className="py-16 lg:py-24 bg-stone-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-stone-900 mb-4">
-                {t.home.officeTitle}
-              </h2>
-              <p className="text-lg text-stone-600 mb-6">
-                {t.home.officeTeaser}
-              </p>
-              <div className="flex items-start gap-3 mb-6">
-                <MapPin className="w-5 h-5 text-stone-700 mt-1 flex-shrink-0" />
-                <div>
-                  <p className="font-medium text-stone-900">
-                    {siteConfig.office.address}
-                  </p>
-                  <p className="text-stone-600">{siteConfig.office.hours}</p>
-                </div>
-              </div>
-              <Link href="/cabinet-contact">
-                <Button variant="outline">{t.common.learnMore}</Button>
-              </Link>
-            </div>
-            <div className="bg-stone-200 rounded-2xl h-80 lg:h-96 flex items-center justify-center">
-              <MapPin className="w-16 h-16 text-stone-400" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Resources Teaser */}
-      <section className="py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-stone-900 mb-4">
-              {t.home.resourcesTitle}
+      {/* Themes Section - Simplified */}
+      <section className="py-20 lg:py-28 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl sm:text-5xl font-bold text-stone-900 mb-6">
+              {t.home.themesTitle}
             </h2>
-            <p className="text-lg text-stone-600 max-w-2xl mx-auto mb-8">
-              {t.home.resourcesSubtitle}
+            <p className="text-xl text-stone-600 max-w-3xl mx-auto">
+              {t.home.themesSubtitle}
             </p>
-            <Link href="/ressources">
-              <Button variant="outline">
-                {t.common.learnMore}
-                <ArrowRight className="ml-2 w-4 h-4" />
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {themes.map((theme: string) => (
+              <div key={theme} className="p-6 bg-stone-50 rounded-lg border border-stone-200">
+                <p className="font-medium text-stone-900 text-lg">{theme}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact CTA */}
+      <section className="py-20 bg-stone-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-stone-900 mb-6">
+            Des questions?
+          </h2>
+          <p className="text-xl text-stone-600 mb-8">
+            N'hésitez pas à me contacter pour discuter de vos besoins.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/cabinet-contact">
+              <Button size="lg" variant="outline" className="px-8 py-4 text-lg">
+                Contactez-moi
               </Button>
             </Link>
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 lg:py-24 bg-stone-900 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-            Prêt à commencer votre parcours ?
-          </h2>
-          <p className="text-lg text-stone-300 mb-8">
-            Prenez le premier pas vers votre bien-être mental aujourd'hui.
-          </p>
-          <Link href="/prendre-rendez-vous">
-            <Button
-              size="lg"
-              className="bg-white text-stone-900 hover:bg-stone-100"
-            >
-              <Calendar className="mr-2 w-5 h-5" />
-              {t.home.heroCTA}
-            </Button>
-          </Link>
         </div>
       </section>
     </div>

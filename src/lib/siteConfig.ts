@@ -4,11 +4,11 @@ export const siteConfig = {
   title: "Psychologue clinicienne",
   credentials: "M.A. en Psychologie Clinique",
   
-  // Contact Information (Placeholders)
+  // Contact Information
   contact: {
-    phone: "+509 XXXX-XXXX",
-    email: "contact@johannelandrin.com",
-    whatsapp: "+509 XXXX-XXXX",
+    phone: "+509 3402 3833",
+    email: "jolandrin@hotmail.com",
+    whatsapp: "+509 3402 3833",
   },
   
   // Office Information (Placeholders)
@@ -25,11 +25,11 @@ export const siteConfig = {
     enableCalendly: false, // Set to true to use Calendly embed
   },
   
-  // Social Media (Placeholders)
+  // Social Media
   social: {
     facebook: "",
     instagram: "",
-    linkedin: "",
+    linkedin: "https://linkedin.com/in/johanne-landrin-44a3742",
   },
   
   // Feature Flags
