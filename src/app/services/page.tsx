@@ -1,6 +1,5 @@
 'use client';
 
-import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageProvider';
 import { siteConfig } from '@/lib/siteConfig';
 import Button from '@/components/ui/Button';
@@ -26,14 +25,6 @@ export default function ServicesPage() {
             <p className="mt-4 text-lg text-black/70 leading-relaxed">
               {t.services.subtitle}
             </p>
-            <div className="mt-8">
-              <a href={bookingUrl} target="_blank" rel="noreferrer">
-                <Button size="lg">
-                  {t.common.bookNow}
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-              </a>
-            </div>
           </div>
         </div>
       </section>
