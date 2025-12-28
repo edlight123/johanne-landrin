@@ -34,7 +34,7 @@ export default function AboutPage() {
   return (
     <div>
       {/* Top section (3 columns) */}
-      <section className="py-16 lg:py-24 bg-white">
+      <section className="py-12 lg:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div>
             <h1 className="text-4xl sm:text-5xl font-semibold text-black leading-tight">
