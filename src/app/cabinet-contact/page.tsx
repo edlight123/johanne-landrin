@@ -47,10 +47,10 @@ export default function OfficePage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
+          <h1 className="text-4xl sm:text-5xl font-bold text-stone-900 mb-4">
             {t.office.title}
           </h1>
-          <p className="text-xl text-slate-600">{t.office.subtitle}</p>
+          <p className="text-xl text-stone-600">{t.office.subtitle}</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -58,22 +58,22 @@ export default function OfficePage() {
           <div className="space-y-8">
             {/* Location */}
             <Card>
-              <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+              <h2 className="text-2xl font-bold text-stone-900 mb-6 flex items-center gap-3">
                 <MapPin className="w-6 h-6" />
                 {t.office.locationTitle}
               </h2>
               <div className="space-y-3">
-                <p className="text-lg font-medium text-slate-900">
+                <p className="text-lg font-medium text-stone-900">
                   {siteConfig.office.address}
                 </p>
-                <p className="text-slate-600">
+                <p className="text-stone-600">
                   {siteConfig.office.detailedAddress}
                 </p>
               </div>
 
               {/* Map Placeholder */}
               {siteConfig.features.enableMap && siteConfig.office.mapEmbedUrl ? (
-                <div className="mt-6 bg-slate-100 rounded-lg overflow-hidden h-64">
+                <div className="mt-6 bg-stone-100 rounded-lg overflow-hidden h-64">
                   <iframe
                     src={siteConfig.office.mapEmbedUrl}
                     width="100%"
@@ -85,37 +85,37 @@ export default function OfficePage() {
                   />
                 </div>
               ) : (
-                <div className="mt-6 bg-slate-100 rounded-lg h-64 flex items-center justify-center">
-                  <MapPin className="w-12 h-12 text-slate-400" />
+                <div className="mt-6 bg-stone-100 rounded-lg h-64 flex items-center justify-center">
+                  <MapPin className="w-12 h-12 text-stone-400" />
                 </div>
               )}
             </Card>
 
             {/* Hours */}
             <Card>
-              <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+              <h2 className="text-2xl font-bold text-stone-900 mb-6 flex items-center gap-3">
                 <Clock className="w-6 h-6" />
                 {t.office.hoursTitle}
               </h2>
-              <p className="text-lg text-slate-600">{siteConfig.office.hours}</p>
+              <p className="text-lg text-stone-600">{siteConfig.office.hours}</p>
             </Card>
 
             {/* Contact */}
             <Card>
-              <h2 className="text-2xl font-bold text-slate-900 mb-6">
+              <h2 className="text-2xl font-bold text-stone-900 mb-6">
                 {t.office.contactTitle}
               </h2>
               <div className="space-y-4">
                 <a
                   href={`tel:${siteConfig.contact.phone}`}
-                  className="flex items-center gap-3 text-slate-600 hover:text-slate-900 transition-colors"
+                  className="flex items-center gap-3 text-stone-600 hover:text-stone-900 transition-colors"
                 >
                   <Phone className="w-5 h-5" />
                   <span className="text-lg">{siteConfig.contact.phone}</span>
                 </a>
                 <a
                   href={`mailto:${siteConfig.contact.email}`}
-                  className="flex items-center gap-3 text-slate-600 hover:text-slate-900 transition-colors"
+                  className="flex items-center gap-3 text-stone-600 hover:text-stone-900 transition-colors"
                 >
                   <Mail className="w-5 h-5" />
                   <span className="text-lg">{siteConfig.contact.email}</span>
@@ -127,7 +127,7 @@ export default function OfficePage() {
           {/* Right Column - Contact Form */}
           <div>
             <Card>
-              <h2 className="text-2xl font-bold text-slate-900 mb-6">
+              <h2 className="text-2xl font-bold text-stone-900 mb-6">
                 {t.office.contactFormTitle}
               </h2>
 

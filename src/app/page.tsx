@@ -80,10 +80,10 @@ export default function HomePage() {
       <section className="relative bg-gradient-to-b from-slate-100 to-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-stone-900 mb-6">
               {t.home.heroTitle}
             </h1>
-            <p className="text-lg sm:text-xl text-slate-600 mb-8">
+            <p className="text-lg sm:text-xl text-stone-600 mb-8">
               {t.home.heroSubtitle}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -107,10 +107,10 @@ export default function HomePage() {
       <section className="py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-stone-900 mb-4">
               {t.home.servicesTitle}
             </h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            <p className="text-lg text-stone-600 max-w-2xl mx-auto">
               {t.home.servicesSubtitle}
             </p>
           </div>
@@ -119,13 +119,13 @@ export default function HomePage() {
               <Link key={service.href} href={service.href}>
                 <Card hover className="h-full">
                   <div className="flex flex-col items-center text-center">
-                    <div className="w-14 h-14 bg-slate-100 rounded-full flex items-center justify-center mb-4">
-                      <service.icon className="w-7 h-7 text-slate-900" />
+                    <div className="w-14 h-14 bg-stone-100 rounded-full flex items-center justify-center mb-4">
+                      <service.icon className="w-7 h-7 text-stone-900" />
                     </div>
-                    <h3 className="text-xl font-semibold text-slate-900 mb-2">
+                    <h3 className="text-xl font-semibold text-stone-900 mb-2">
                       {service.title}
                     </h3>
-                    <p className="text-slate-600">{service.description}</p>
+                    <p className="text-stone-600">{service.description}</p>
                   </div>
                 </Card>
               </Link>
@@ -135,20 +135,20 @@ export default function HomePage() {
       </section>
 
       {/* Themes Section */}
-      <section className="py-16 lg:py-24 bg-slate-50">
+      <section className="py-16 lg:py-24 bg-stone-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-stone-900 mb-4">
               {t.home.themesTitle}
             </h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            <p className="text-lg text-stone-600 max-w-2xl mx-auto">
               {t.home.themesSubtitle}
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {themes.map((theme, index) => (
               <Card key={index} className="text-center">
-                <p className="font-medium text-slate-900">{theme}</p>
+                <p className="font-medium text-stone-900">{theme}</p>
               </Card>
             ))}
           </div>
@@ -159,10 +159,10 @@ export default function HomePage() {
       <section className="py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-stone-900 mb-6">
               {t.home.aboutTitle}
             </h2>
-            <p className="text-lg text-slate-600 mb-8">{t.home.aboutTeaser}</p>
+            <p className="text-lg text-stone-600 mb-8">{t.home.aboutTeaser}</p>
             <Link href="/a-propos">
               <Button variant="outline">{t.common.learnMore}</Button>
             </Link>
@@ -171,31 +171,31 @@ export default function HomePage() {
       </section>
 
       {/* Office Teaser */}
-      <section className="py-16 lg:py-24 bg-slate-50">
+      <section className="py-16 lg:py-24 bg-stone-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold text-stone-900 mb-4">
                 {t.home.officeTitle}
               </h2>
-              <p className="text-lg text-slate-600 mb-6">
+              <p className="text-lg text-stone-600 mb-6">
                 {t.home.officeTeaser}
               </p>
               <div className="flex items-start gap-3 mb-6">
-                <MapPin className="w-5 h-5 text-slate-700 mt-1 flex-shrink-0" />
+                <MapPin className="w-5 h-5 text-stone-700 mt-1 flex-shrink-0" />
                 <div>
-                  <p className="font-medium text-slate-900">
+                  <p className="font-medium text-stone-900">
                     {siteConfig.office.address}
                   </p>
-                  <p className="text-slate-600">{siteConfig.office.hours}</p>
+                  <p className="text-stone-600">{siteConfig.office.hours}</p>
                 </div>
               </div>
               <Link href="/cabinet-contact">
                 <Button variant="outline">{t.common.learnMore}</Button>
               </Link>
             </div>
-            <div className="bg-slate-200 rounded-2xl h-80 lg:h-96 flex items-center justify-center">
-              <MapPin className="w-16 h-16 text-slate-400" />
+            <div className="bg-stone-200 rounded-2xl h-80 lg:h-96 flex items-center justify-center">
+              <MapPin className="w-16 h-16 text-stone-400" />
             </div>
           </div>
         </div>
@@ -205,10 +205,10 @@ export default function HomePage() {
       <section className="py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-stone-900 mb-4">
               {t.home.resourcesTitle}
             </h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto mb-8">
+            <p className="text-lg text-stone-600 max-w-2xl mx-auto mb-8">
               {t.home.resourcesSubtitle}
             </p>
             <Link href="/ressources">
@@ -222,18 +222,18 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 lg:py-24 bg-slate-900 text-white">
+      <section className="py-16 lg:py-24 bg-stone-900 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-6">
             Prêt à commencer votre parcours ?
           </h2>
-          <p className="text-lg text-slate-300 mb-8">
+          <p className="text-lg text-stone-300 mb-8">
             Prenez le premier pas vers votre bien-être mental aujourd'hui.
           </p>
           <Link href="/prendre-rendez-vous">
             <Button
               size="lg"
-              className="bg-white text-slate-900 hover:bg-slate-100"
+              className="bg-white text-stone-900 hover:bg-stone-100"
             >
               <Calendar className="mr-2 w-5 h-5" />
               {t.home.heroCTA}

@@ -34,35 +34,35 @@ export default function AboutPage() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
+          <h1 className="text-4xl sm:text-5xl font-bold text-stone-900 mb-4">
             {t.about.title}
           </h1>
-          <p className="text-xl text-slate-600">{t.about.subtitle}</p>
+          <p className="text-xl text-stone-600">{t.about.subtitle}</p>
         </div>
 
         {/* Bio */}
         <Card className="mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">
+          <h2 className="text-2xl sm:text-3xl font-bold text-stone-900 mb-4">
             {t.about.bioTitle}
           </h2>
-          <p className="text-lg text-slate-600 leading-relaxed">
+          <p className="text-lg text-stone-600 leading-relaxed">
             {t.about.bioText}
           </p>
         </Card>
 
         {/* Education */}
         <Card className="mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">
+          <h2 className="text-2xl sm:text-3xl font-bold text-stone-900 mb-4">
             {t.about.educationTitle}
           </h2>
           <div className="space-y-4">
             <div className="flex items-start gap-3">
-              <GraduationCap className="w-6 h-6 text-slate-700 mt-1 flex-shrink-0" />
+              <GraduationCap className="w-6 h-6 text-stone-700 mt-1 flex-shrink-0" />
               <div>
-                <p className="font-medium text-slate-900">
+                <p className="font-medium text-stone-900">
                   {siteConfig.credentials}
                 </p>
-                <p className="text-slate-600">{t.about.educationText}</p>
+                <p className="text-stone-600">{t.about.educationText}</p>
               </div>
             </div>
           </div>
@@ -70,37 +70,37 @@ export default function AboutPage() {
 
         {/* Approach */}
         <Card className="mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">
+          <h2 className="text-2xl sm:text-3xl font-bold text-stone-900 mb-4">
             {t.about.approachTitle}
           </h2>
-          <p className="text-lg text-slate-600 leading-relaxed">
+          <p className="text-lg text-stone-600 leading-relaxed">
             {t.about.approachText}
           </p>
         </Card>
 
         {/* Values */}
         <div className="mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-8 text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold text-stone-900 mb-8 text-center">
             {t.about.valuesTitle}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {values.map((value, index) => (
               <Card key={index} className="text-center">
-                <div className="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <value.icon className="w-6 h-6 text-slate-900" />
+                <div className="w-12 h-12 bg-stone-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <value.icon className="w-6 h-6 text-stone-900" />
                 </div>
-                <p className="font-semibold text-slate-900">{value.title}</p>
+                <p className="font-semibold text-stone-900">{value.title}</p>
               </Card>
             ))}
           </div>
         </div>
 
         {/* CTA */}
-        <div className="text-center bg-slate-50 rounded-2xl p-8">
-          <h2 className="text-2xl font-bold text-slate-900 mb-4">
+        <div className="text-center bg-stone-50 rounded-2xl p-8">
+          <h2 className="text-2xl font-bold text-stone-900 mb-4">
             Prêt à commencer ?
           </h2>
-          <p className="text-slate-600 mb-6">
+          <p className="text-stone-600 mb-6">
             Contactez-moi pour discuter de vos besoins et planifier une première rencontre.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

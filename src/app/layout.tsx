@@ -38,7 +38,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className={inter.variable}>
-      <body className="antialiased bg-slate-50 text-slate-900">
+      <body className="antialiased bg-stone-50 text-stone-900">
         <ErrorBoundary>
           <LanguageProvider>
             <div className="flex flex-col min-h-screen">

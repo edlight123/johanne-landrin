@@ -11,7 +11,7 @@ export default function Card({ children, className, hover = false, ...props }: C
   return (
     <div
       className={cn(
-        'rounded-xl bg-white p-6 shadow-sm border border-slate-100',
+        'rounded-xl bg-white p-6 shadow-sm border border-stone-100',
         hover && 'transition-shadow hover:shadow-md',
         className
       )}

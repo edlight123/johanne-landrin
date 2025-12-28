@@ -48,10 +48,10 @@ export default function ServicesPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
+          <h1 className="text-4xl sm:text-5xl font-bold text-stone-900 mb-4">
             {t.services.title}
           </h1>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+          <p className="text-xl text-stone-600 max-w-3xl mx-auto">
             {t.services.subtitle}
           </p>
         </div>
@@ -66,14 +66,14 @@ export default function ServicesPage() {
                   {/* Icon & Title */}
                   <div className="lg:col-span-3">
                     <div className="flex items-center gap-4 mb-4">
-                      <div className="w-14 h-14 bg-slate-100 rounded-full flex items-center justify-center flex-shrink-0">
-                        <service.icon className="w-7 h-7 text-slate-900" />
+                      <div className="w-14 h-14 bg-stone-100 rounded-full flex items-center justify-center flex-shrink-0">
+                        <service.icon className="w-7 h-7 text-stone-900" />
                       </div>
-                      <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">
+                      <h2 className="text-2xl sm:text-3xl font-bold text-stone-900">
                         {service.title}
                       </h2>
                     </div>
-                    <p className="text-lg text-slate-600 mb-6">
+                    <p className="text-lg text-stone-600 mb-6">
                       {service.description}
                     </p>
                   </div>
@@ -81,37 +81,37 @@ export default function ServicesPage() {
                   {/* Details */}
                   <div className="space-y-4">
                     <div>
-                      <h3 className="font-semibold text-slate-900 mb-2 flex items-center gap-2">
+                      <h3 className="font-semibold text-stone-900 mb-2 flex items-center gap-2">
                         <Users className="w-5 h-5" />
                         {t.services.individual.forWho}
                       </h3>
-                      <p className="text-slate-600">{service.forWho}</p>
+                      <p className="text-stone-600">{service.forWho}</p>
                     </div>
                   </div>
 
                   <div className="space-y-4">
                     <div>
-                      <h3 className="font-semibold text-slate-900 mb-2 flex items-center gap-2">
+                      <h3 className="font-semibold text-stone-900 mb-2 flex items-center gap-2">
                         <MapPin className="w-5 h-5" />
                         {t.services.individual.format}
                       </h3>
-                      <p className="text-slate-600">{service.format}</p>
+                      <p className="text-stone-600">{service.format}</p>
                     </div>
                   </div>
 
                   <div className="space-y-4">
                     <div>
-                      <h3 className="font-semibold text-slate-900 mb-2 flex items-center gap-2">
+                      <h3 className="font-semibold text-stone-900 mb-2 flex items-center gap-2">
                         <Clock className="w-5 h-5" />
                         {t.services.individual.duration}
                       </h3>
-                      <p className="text-slate-600">{service.duration}</p>
+                      <p className="text-stone-600">{service.duration}</p>
                     </div>
                   </div>
                 </div>
 
                 {/* CTA */}
-                <div className="mt-6 pt-6 border-t border-slate-100">
+                <div className="mt-6 pt-6 border-t border-stone-100">
                   <Link href="/prendre-rendez-vous">
                     <Button>{t.common.bookNow}</Button>
                   </Link>
@@ -120,7 +120,7 @@ export default function ServicesPage() {
             ))}
 
           {/* Workshops Card */}
-          <Card className="bg-slate-900 text-white">
+          <Card className="bg-stone-900 text-white">
             <div className="flex items-center gap-4 mb-4">
               <div className="w-14 h-14 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
                 <BookOpen className="w-7 h-7 text-white" />
@@ -129,11 +129,11 @@ export default function ServicesPage() {
                 {t.services.workshops.title}
               </h2>
             </div>
-            <p className="text-lg text-slate-300 mb-6">
+            <p className="text-lg text-stone-300 mb-6">
               {t.services.workshops.description}
             </p>
             <Link href="/ateliers-conferences">
-              <Button className="bg-white text-slate-900 hover:bg-slate-100">
+              <Button className="bg-white text-stone-900 hover:bg-stone-100">
                 {t.services.workshops.link}
               </Button>
             </Link>
@@ -141,11 +141,11 @@ export default function ServicesPage() {
         </div>
 
         {/* CTA Section */}
-        <div className="mt-16 text-center bg-slate-50 rounded-2xl p-8 lg:p-12">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">
+        <div className="mt-16 text-center bg-stone-50 rounded-2xl p-8 lg:p-12">
+          <h2 className="text-2xl sm:text-3xl font-bold text-stone-900 mb-4">
             Commencez votre parcours aujourd'hui
           </h2>
-          <p className="text-lg text-slate-600 mb-6 max-w-2xl mx-auto">
+          <p className="text-lg text-stone-600 mb-6 max-w-2xl mx-auto">
             Prenez rendez-vous pour une première consultation et découvrez comment nous pouvons vous accompagner.
           </p>
           <Link href="/prendre-rendez-vous">

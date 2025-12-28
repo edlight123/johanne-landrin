@@ -59,33 +59,33 @@ export default function WorkshopsPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
+          <h1 className="text-4xl sm:text-5xl font-bold text-stone-900 mb-4">
             {t.workshops.title}
           </h1>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+          <p className="text-xl text-stone-600 max-w-3xl mx-auto">
             {t.workshops.subtitle}
           </p>
         </div>
 
         {/* Intro */}
         <Card className="mb-12">
-          <p className="text-lg text-slate-600 leading-relaxed">
+          <p className="text-lg text-stone-600 leading-relaxed">
             {t.workshops.intro}
           </p>
         </Card>
 
         {/* Audiences */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+          <h2 className="text-3xl font-bold text-stone-900 mb-8 text-center">
             {t.workshops.audienceTitle}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {audiences.map((audience, index) => (
               <Card key={index} className="text-center">
-                <div className="w-14 h-14 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <audience.icon className="w-7 h-7 text-slate-900" />
+                <div className="w-14 h-14 bg-stone-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <audience.icon className="w-7 h-7 text-stone-900" />
                 </div>
-                <h3 className="text-xl font-semibold text-slate-900">
+                <h3 className="text-xl font-semibold text-stone-900">
                   {audience.title}
                 </h3>
               </Card>
@@ -95,13 +95,13 @@ export default function WorkshopsPage() {
 
         {/* Topics */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+          <h2 className="text-3xl font-bold text-stone-900 mb-8 text-center">
             {t.workshops.topicsTitle}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {siteConfig.workshopTopics.map((topic, index) => (
               <Card key={index} hover>
-                <p className="font-medium text-slate-900">{topic}</p>
+                <p className="font-medium text-stone-900">{topic}</p>
               </Card>
             ))}
           </div>
@@ -109,16 +109,16 @@ export default function WorkshopsPage() {
 
         {/* Formats */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+          <h2 className="text-3xl font-bold text-stone-900 mb-8 text-center">
             {t.workshops.formatsTitle}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {formats.map((format, index) => (
               <Card key={index} className="text-center">
-                <div className="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <format.icon className="w-6 h-6 text-slate-900" />
+                <div className="w-12 h-12 bg-stone-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <format.icon className="w-6 h-6 text-stone-900" />
                 </div>
-                <p className="font-medium text-slate-900">{format.title}</p>
+                <p className="font-medium text-stone-900">{format.title}</p>
               </Card>
             ))}
           </div>
@@ -126,7 +126,7 @@ export default function WorkshopsPage() {
 
         {/* Inquiry Form */}
         <Card className="max-w-3xl mx-auto">
-          <h2 className="text-2xl font-bold text-slate-900 mb-6">
+          <h2 className="text-2xl font-bold text-stone-900 mb-6">
             {t.workshops.inquiryTitle}
           </h2>
 
