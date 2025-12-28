@@ -83,21 +83,33 @@ export default function HomePage() {
         <div className="absolute inset-0">
           <div
             className="absolute inset-0 bg-center bg-cover"
-            style={{ backgroundImage: "url('/hero-reception.jpg')" }}
+            style={{ backgroundImage: "url('/hero-therapy-waiting-room.jpg')" }}
             aria-hidden="true"
           />
-          <div className="absolute inset-0 bg-white/70" aria-hidden="true" />
+          <div className="absolute inset-0 bg-black/35" aria-hidden="true" />
         </div>
 
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl">
-            <p className="text-teal-700 font-medium mb-3 tracking-wide uppercase text-sm">
+            <p className="text-white/80 font-medium mb-3 tracking-wide uppercase text-sm">
               {siteConfig.credentials}
             </p>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-black leading-tight">
-              {t.home.heroTitle}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-white leading-tight">
+              {(() => {
+                const parts = t.home.heroTitle.split(' & ');
+                if (parts.length === 2) {
+                  return (
+                    <>
+                      {parts[0]} <span className="text-white/90">&</span>
+                      <br />
+                      {parts[1]}
+                    </>
+                  );
+                }
+                return t.home.heroTitle;
+              })()}
             </h1>
-            <p className="mt-6 text-lg sm:text-xl text-black/70 leading-relaxed max-w-2xl">
+            <p className="mt-6 text-lg sm:text-xl text-white/80 leading-relaxed max-w-2xl">
               {t.home.heroSubtitle}
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
@@ -113,7 +125,11 @@ export default function HomePage() {
                 </Button>
               </a>
               <Link href="/a-propos" className="w-full sm:w-auto">
-                <Button variant="outline" size="lg" className="w-full px-7 py-3 text-base sm:text-lg">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="w-full px-7 py-3 text-base sm:text-lg border-white/60 text-white hover:bg-white/10"
+                >
                   En savoir plus
                 </Button>
               </Link>
