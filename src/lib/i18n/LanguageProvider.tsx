@@ -14,20 +14,26 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [locale, setLocaleState] = useState<Locale>('fr');
   const [t, setT] = useState(() => getDictionary('fr'));
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // Load locale from localStorage
-    const saved = localStorage.getItem('locale') as Locale | null;
-    if (saved && (saved === 'fr' || saved === 'kr')) {
-      setLocaleState(saved);
-      setT(getDictionary(saved));
+    setMounted(true);
+    // Load locale from localStorage only on client
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('locale') as Locale | null;
+      if (saved && (saved === 'fr' || saved === 'kr')) {
+        setLocaleState(saved);
+        setT(getDictionary(saved));
+      }
     }
   }, []);
 
   const setLocale = (newLocale: Locale) => {
     setLocaleState(newLocale);
     setT(getDictionary(newLocale));
-    localStorage.setItem('locale', newLocale);
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('locale', newLocale);
+    }
   };
 
   return (
