@@ -111,8 +111,6 @@ export default function AboutPage() {
                   <GraduationCap className="w-6 h-6 text-teal-700 flex-shrink-0" />
                   <h2 className="text-2xl font-semibold text-black">{t.about.educationTitle}</h2>
                 </div>
-                <p className="mt-3 text-black/70">{t.about.educationIntro}</p>
-
                 <div className="mt-5 space-y-4">
                   {siteConfig.education.map((item) => (
                     <div key={`${item.institution}-${item.degree}`}>
@@ -131,17 +129,15 @@ export default function AboutPage() {
                 <Card>
                   <div className="flex items-center gap-3">
                     <Shield className="w-6 h-6 text-teal-700 flex-shrink-0" />
-                    <h2 className="text-2xl font-semibold text-black">{t.about.certificationsTitle}</h2>
+                    <h2 className="text-xl sm:text-2xl font-semibold text-black whitespace-nowrap">
+                      {t.about.certificationsTitle}
+                    </h2>
                   </div>
-                  <p className="mt-3 text-black/70">{t.about.certificationsIntro}</p>
-                  <ul className="mt-5 space-y-2 text-black/70">
+                  <div className="mt-5 space-y-2 text-black/70">
                     {siteConfig.certifications.map((c) => (
-                      <li key={c} className="flex items-start gap-2">
-                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-teal-600 flex-shrink-0" />
-                        <span>{c}</span>
-                      </li>
+                      <p key={c}>{c}</p>
                     ))}
-                  </ul>
+                  </div>
                 </Card>
               )}
 
@@ -150,15 +146,11 @@ export default function AboutPage() {
                   <Users className="w-6 h-6 text-teal-700 flex-shrink-0" />
                   <h2 className="text-2xl font-semibold text-black">{t.about.specializationsTitle}</h2>
                 </div>
-                <p className="mt-3 text-black/70">{t.about.specializationsSubtitle}</p>
-                <ul className="mt-5 space-y-2 text-black/70">
+                <div className="mt-5 space-y-2 text-black/70">
                   {themes.map((theme) => (
-                    <li key={theme} className="flex items-start gap-2">
-                      <span className="mt-2 h-1.5 w-1.5 rounded-full bg-teal-600 flex-shrink-0" />
-                      <span>{theme}</span>
-                    </li>
+                    <p key={theme}>{theme}</p>
                   ))}
-                </ul>
+                </div>
               </Card>
             </aside>
           </div>

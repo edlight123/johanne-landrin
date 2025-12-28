@@ -192,16 +192,16 @@ export const dictionaries = {
       bioP3: 'Johanne Landrin reçoit au cabinet (Berthé, Pétion-Ville) et propose également des séances en ligne selon les besoins. Elle intervient aussi auprès d\'organisations (écoles, associations, entreprises) à travers des ateliers et conférences autour du bien-être psychologique, de la communication et des dynamiques familiales.',
 
       educationTitle: 'Formation',
-      educationIntro: 'Parcours universitaire et formations complémentaires.',
+      educationIntro: '',
       approachTitle: 'Mon approche',
       approachText: 'J\'intègre différentes approches thérapeutiques (cognitive-comportementale, humaniste, systémique) selon les besoins uniques de chaque client. Mon objectif est de créer un espace sécurisant où vous pouvez explorer vos difficultés, identifier vos ressources et construire des solutions adaptées.',
       frameText: 'Confidentialité, respect, et un espace sans jugement — à votre rythme.',
 
       certificationsTitle: 'Licences & certifications',
-      certificationsIntro: 'Références professionnelles (si applicable).',
+      certificationsIntro: '',
 
       specializationsTitle: 'Spécialisations',
-      specializationsSubtitle: 'Domaines de consultation fréquemment abordés en thérapie.',
+      specializationsSubtitle: '',
 
       themesTitle: 'Thématiques abordées',
       themesSubtitle: 'Quelques exemples de sujets travaillés en consultation (liste non exhaustive).',
@@ -460,16 +460,16 @@ export const dictionaries = {
       bioP3: 'Johanne Landrin resevwa nan kabinè a (Berthé, Pétion-Ville) epi li pwopoze tou seyans anliy selon bezwen yo. Li entèvni tou ak òganizasyon (lekòl, asosyasyon, antrepriz) atravè atelye ak konferans sou byennèt sikolojik, kominikasyon ak dinamik familyal.',
 
       educationTitle: 'Fòmasyon',
-      educationIntro: 'Chemen inivèsite ak fòmasyon konplemantè.',
+      educationIntro: '',
       approachTitle: 'Apwòch mwen',
       approachText: 'Mwen entegre diferan apwòch terapetik (kognitif-konpòtmantal, imanis, sistemik) selon bezwen inik chak kliyan. Objektif mwen se kreye yon espas sekirite kote ou ka eksplore difikilte ou, idantifye resous ou epi konstwi solisyon adapte.',
       frameText: 'Konfidansyalite, respè, epi yon espas san jijman — selon rit ou.',
 
       certificationsTitle: 'Lisans & sètifikasyon',
-      certificationsIntro: 'Referans pwofesyonèl (si sa aplikab).',
+      certificationsIntro: '',
 
       specializationsTitle: 'Espesyalisasyon',
-      specializationsSubtitle: 'Domèn konsiltasyon yo souvan abòde nan terapi.',
+      specializationsSubtitle: '',
 
       themesTitle: 'Tematik yo trete',
       themesSubtitle: 'Kèk egzanp sijè nou ka travay ansanm (lis la pa fini).',
