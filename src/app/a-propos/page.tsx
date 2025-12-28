@@ -36,16 +36,13 @@ export default function AboutPage() {
       {/* Top section (3 columns) */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col gap-4">
-            <div>
-              <p className="text-sm font-medium tracking-wide uppercase text-black/60">About</p>
-              <div className="mt-2 h-px w-10 bg-teal-600" aria-hidden="true" />
-            </div>
+          <div>
             <h1 className="text-4xl sm:text-5xl font-semibold text-black leading-tight">
               {siteConfig.name},
               {' '}
               {siteConfig.title.charAt(0).toLowerCase() + siteConfig.title.slice(1)}
             </h1>
+            <div className="mt-4 h-0.5 w-14 bg-teal-600" aria-hidden="true" />
           </div>
 
           <div className="mt-12 grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-8 lg:gap-10 items-start">
