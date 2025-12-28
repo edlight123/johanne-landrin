@@ -40,64 +40,67 @@ export default function AboutPage() {
             About {siteConfig.name}.
           </h1>
 
-          <div className="grid grid-cols-1 lg:grid-cols-[320px_1fr_360px] gap-8 lg:gap-x-10 lg:gap-y-6 items-start">
-            {/* Column 1: photo */}
-            <div className="flex flex-col items-center lg:items-start lg:row-start-1 lg:col-start-1">
-              <div className="relative w-72 h-72 rounded-xl overflow-hidden border border-black/10 bg-teal-50">
-                <Image
-                  src={siteConfig.profile.imageUrl}
-                  alt={siteConfig.name}
-                  fill
-                  sizes="288px"
-                  className="object-cover"
-                  priority
-                />
-              </div>
-              <div className="mt-5 text-center lg:text-left">
-                <p className="text-sm font-medium text-teal-700">{siteConfig.credentials}</p>
-                <div className="mt-2 flex items-center justify-center lg:justify-start gap-2 text-sm text-black/70">
-                  <MapPin className="w-4 h-4" />
-                  <span>{siteConfig.office.address}</span>
+          <div className="mt-10 grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-8 lg:gap-10 items-start">
+            {/* Left: photo + bio + approach (independent from sidebar height) */}
+            <div className="grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-8 lg:gap-x-10 items-start">
+              {/* Photo */}
+              <div className="flex flex-col items-center lg:items-start">
+                <div className="relative w-72 h-72 rounded-xl overflow-hidden border border-black/10 bg-teal-50">
+                  <Image
+                    src={siteConfig.profile.imageUrl}
+                    alt={siteConfig.name}
+                    fill
+                    sizes="288px"
+                    className="object-cover"
+                    priority
+                  />
                 </div>
-              </div>
-
-              <div className="mt-6 w-full flex flex-col gap-3">
-                <a href={bookingUrl} target="_blank" rel="noreferrer" className="w-full">
-                  <Button size="lg" className="w-full">{t.common.bookNow}</Button>
-                </a>
-                <Link href="/contact" className="w-full">
-                  <Button variant="outline" size="lg" className="w-full">
-                    {t.common.contactUs}
-                  </Button>
-                </Link>
-              </div>
-            </div>
-
-            {/* Column 2: bio */}
-            <div className="lg:row-start-1 lg:col-start-2">
-              <div className="space-y-5">
-                <p className="text-lg text-black/70 leading-relaxed">{t.about.bioP1}</p>
-                <p className="text-lg text-black/70 leading-relaxed">{t.about.bioP2}</p>
-                <p className="text-lg text-black/70 leading-relaxed">{t.about.bioP3}</p>
-              </div>
-            </div>
-
-            {/* Treatment philosophy (under bio, spanning photo+bio columns) */}
-            <div className="lg:row-start-2 lg:col-start-1 lg:col-span-2">
-              <Card>
-                <div className="flex items-start gap-3">
-                  <Shield className="w-6 h-6 text-teal-700 mt-0.5 flex-shrink-0" />
-                  <div className="flex-1">
-                    <h2 className="text-2xl font-semibold text-black">{t.about.approachTitle}</h2>
-                    <p className="mt-4 text-black/70 leading-relaxed">{t.about.approachText}</p>
-                    <p className="mt-4 text-sm text-black/70">{t.about.frameText}</p>
+                <div className="mt-5 text-center lg:text-left">
+                  <p className="text-sm font-medium text-teal-700">{siteConfig.credentials}</p>
+                  <div className="mt-2 flex items-center justify-center lg:justify-start gap-2 text-sm text-black/70">
+                    <MapPin className="w-4 h-4" />
+                    <span>{siteConfig.office.address}</span>
                   </div>
                 </div>
-              </Card>
+
+                <div className="mt-6 w-full flex flex-col gap-3">
+                  <a href={bookingUrl} target="_blank" rel="noreferrer" className="w-full">
+                    <Button size="lg" className="w-full">{t.common.bookNow}</Button>
+                  </a>
+                  <Link href="/contact" className="w-full">
+                    <Button variant="outline" size="lg" className="w-full">
+                      {t.common.contactUs}
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+
+              {/* Bio */}
+              <div>
+                <div className="space-y-5">
+                  <p className="text-lg text-black/70 leading-relaxed">{t.about.bioP1}</p>
+                  <p className="text-lg text-black/70 leading-relaxed">{t.about.bioP2}</p>
+                  <p className="text-lg text-black/70 leading-relaxed">{t.about.bioP3}</p>
+                </div>
+              </div>
+
+              {/* Treatment philosophy (directly under bio; spans photo+bio) */}
+              <div className="lg:col-span-2">
+                <Card>
+                  <div className="flex items-start gap-3">
+                    <Shield className="w-6 h-6 text-teal-700 mt-0.5 flex-shrink-0" />
+                    <div className="flex-1">
+                      <h2 className="text-2xl font-semibold text-black">{t.about.approachTitle}</h2>
+                      <p className="mt-4 text-black/70 leading-relaxed">{t.about.approachText}</p>
+                      <p className="mt-4 text-sm text-black/70">{t.about.frameText}</p>
+                    </div>
+                  </div>
+                </Card>
+              </div>
             </div>
 
-            {/* Column 3: education, certifications, specializations */}
-            <aside className="space-y-6 lg:row-start-1 lg:col-start-3">
+            {/* Right: education, certifications, specializations */}
+            <aside className="space-y-6">
               <Card>
                 <div className="flex items-center gap-3">
                   <GraduationCap className="w-6 h-6 text-teal-700 flex-shrink-0" />
