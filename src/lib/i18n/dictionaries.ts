@@ -57,6 +57,14 @@ export const dictionaries = {
     services: {
       title: 'Services',
       subtitle: 'Accompagnement psychologique personnalisé',
+      learnMore: 'En savoir plus',
+      backToServices: 'Retour aux services',
+      detailsPlaceholder:
+        "Détails à venir. Vous pouvez réserver un premier rendez-vous pour clarifier vos besoins et définir ensemble le cadre de l’accompagnement.",
+      labels: {
+        format: 'Format',
+        public: 'Public',
+      },
       viewDetails: 'Voir détails',
       reserveLink: 'Réserver',
       howItWorksTitle: 'Comment ça se passe ? ',
@@ -339,6 +347,14 @@ export const dictionaries = {
     services: {
       title: 'Sèvis',
       subtitle: 'Akonpayman sikolojik pèsonalize',
+      learnMore: 'Aprann plis',
+      backToServices: 'Retounen sou sèvis yo',
+      detailsPlaceholder:
+        'Detay ap vini. Ou ka rezève yon premye randevou pou klarifye bezwen ou epi mete kad akonpayman an ansanm.',
+      labels: {
+        format: 'Fòma',
+        public: 'Piblik',
+      },
       viewDetails: 'Gade detay yo',
       reserveLink: 'Rezève',
       howItWorksTitle: 'Kijan sa fèt?',
