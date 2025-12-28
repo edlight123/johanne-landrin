@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Script from 'next/script';
-import { ArrowRight, Heart, Users, BookOpen, Calendar, MapPin } from 'lucide-react';
+import { ArrowRight, Heart, Users, BookOpen } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageProvider';
 import { siteConfig } from '@/lib/siteConfig';
 import { generateLocalBusinessSchema, generateWebsiteSchema } from '@/lib/schema';

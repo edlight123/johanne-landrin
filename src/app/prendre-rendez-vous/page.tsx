@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Calendar, CheckCircle, Clock, Shield } from 'lucide-react';
+import { Calendar, CheckCircle, Shield } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageProvider';
 import { siteConfig } from '@/lib/siteConfig';
 import Button from '@/components/ui/Button';
@@ -36,7 +36,7 @@ export default function BookingPage() {
 
       setSuccess(true);
       (e.target as HTMLFormElement).reset();
-    } catch (err) {
+    } catch {
       setError('Une erreur est survenue. Veuillez réessayer.');
     } finally {
       setLoading(false);
@@ -162,8 +162,8 @@ export default function BookingPage() {
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
           <Card>
             <div className="text-center">
-              <div className="w-12 h-12 bg-stone-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <CheckCircle className="w-6 h-6 text-stone-900" />
+              <div className="w-12 h-12 bg-teal-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                <CheckCircle className="w-6 h-6 text-teal-700" />
               </div>
               <h3 className="font-semibold text-stone-900 mb-2">Étape 1</h3>
               <p className="text-sm text-stone-600">{t.booking.step1}</p>
@@ -172,8 +172,8 @@ export default function BookingPage() {
 
           <Card>
             <div className="text-center">
-              <div className="w-12 h-12 bg-stone-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Calendar className="w-6 h-6 text-stone-900" />
+              <div className="w-12 h-12 bg-teal-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Calendar className="w-6 h-6 text-teal-700" />
               </div>
               <h3 className="font-semibold text-stone-900 mb-2">Étape 2</h3>
               <p className="text-sm text-stone-600">{t.booking.step2}</p>
@@ -182,8 +182,8 @@ export default function BookingPage() {
 
           <Card>
             <div className="text-center">
-              <div className="w-12 h-12 bg-stone-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-6 h-6 text-stone-900" />
+              <div className="w-12 h-12 bg-teal-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="w-6 h-6 text-teal-700" />
               </div>
               <h3 className="font-semibold text-stone-900 mb-2">Étape 3</h3>
               <p className="text-sm text-stone-600">{t.booking.step3}</p>

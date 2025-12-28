@@ -35,7 +35,7 @@ export default function OfficePage() {
 
       setSuccess(true);
       (e.target as HTMLFormElement).reset();
-    } catch (err) {
+    } catch {
       setError('Une erreur est survenue. Veuillez réessayer.');
     } finally {
       setLoading(false);

@@ -23,38 +23,32 @@ export class ErrorBoundary extends Component<Props, State> {
 
   render() {
     if (this.state.hasError) {
+      const isProd = process.env.NODE_ENV === 'production';
       return (
-        <div style={{ padding: '50px', textAlign: 'center' }}>
-          <h1 style={{ fontSize: '32px', color: 'red', marginBottom: '20px' }}>
-            Something went wrong
-          </h1>
-          <pre style={{ 
-            textAlign: 'left', 
-            background: '#f5f5f5', 
-            padding: '20px', 
-            borderRadius: '8px',
-            overflow: 'auto',
-            maxWidth: '800px',
-            margin: '0 auto'
-          }}>
-            {this.state.error?.toString()}
-            {'\n\n'}
-            {this.state.error?.stack}
-          </pre>
-          <button 
-            onClick={() => window.location.reload()}
-            style={{
-              marginTop: '20px',
-              padding: '10px 20px',
-              background: '#0070f3',
-              color: 'white',
-              border: 'none',
-              borderRadius: '5px',
-              cursor: 'pointer'
-            }}
-          >
-            Reload Page
-          </button>
+        <div className="min-h-[60vh] flex items-center justify-center px-6 py-16">
+          <div className="w-full max-w-2xl rounded-2xl bg-white border border-stone-200/70 ring-1 ring-stone-900/5 p-8 text-center">
+            <h1 className="text-2xl sm:text-3xl font-semibold text-stone-900">
+              Une erreur est survenue
+            </h1>
+            <p className="mt-3 text-stone-600">
+              Veuillez recharger la page. Si le problème persiste, contactez-nous.
+            </p>
+
+            {!isProd && this.state.error && (
+              <pre className="mt-6 text-left text-xs sm:text-sm whitespace-pre-wrap rounded-xl bg-stone-50 border border-stone-200/70 p-4 overflow-auto">
+                {this.state.error.toString()}
+                {'\n\n'}
+                {this.state.error.stack}
+              </pre>
+            )}
+
+            <button
+              onClick={() => window.location.reload()}
+              className="mt-6 inline-flex items-center justify-center rounded-lg bg-teal-600 px-5 py-2.5 text-white font-medium hover:bg-teal-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-600 focus-visible:ring-offset-2"
+            >
+              Recharger
+            </button>
+          </div>
         </div>
       );
     }

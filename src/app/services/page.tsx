@@ -1,6 +1,6 @@
 'use client';
 
-import { Heart, Users, BookOpen, Clock, MapPin, Video } from 'lucide-react';
+import { Heart, Users, BookOpen, Clock, MapPin } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageProvider';
 import { siteConfig } from '@/lib/siteConfig';
 import Button from '@/components/ui/Button';
@@ -120,7 +120,7 @@ export default function ServicesPage() {
             ))}
 
           {/* Workshops Card */}
-          <Card className="bg-stone-900 text-white">
+          <Card className="bg-teal-700 text-white">
             <div className="flex items-center gap-4 mb-4">
               <div className="w-14 h-14 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
                 <BookOpen className="w-7 h-7 text-white" />
@@ -129,7 +129,7 @@ export default function ServicesPage() {
                 {t.services.workshops.title}
               </h2>
             </div>
-            <p className="text-lg text-stone-300 mb-6">
+            <p className="text-lg text-white/80 mb-6">
               {t.services.workshops.description}
             </p>
             <Link href="/ateliers-conferences">

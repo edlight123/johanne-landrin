@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { Search } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageProvider';
 import Card from '@/components/ui/Card';
-import Input from '@/components/ui/Input';
 import Link from 'next/link';
 
 // Placeholder posts - in production, these would come from MDX files
@@ -71,7 +70,7 @@ export default function ResourcesPage() {
               placeholder={t.resources.searchPlaceholder}
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-12 pr-4 py-3 rounded-lg border border-stone-300 focus:border-stone-900 focus:outline-none focus:ring-2 focus:ring-slate-900/10"
+              className="w-full pl-12 pr-4 py-3 rounded-lg border border-stone-300 focus:border-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-600/10"
             />
           </div>
 
@@ -81,7 +80,7 @@ export default function ResourcesPage() {
               onClick={() => setSelectedTag('')}
               className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                 !selectedTag
-                  ? 'bg-stone-900 text-white'
+                  ? 'bg-teal-600 text-white'
                   : 'bg-stone-100 text-stone-700 hover:bg-stone-200'
               }`}
             >
@@ -93,7 +92,7 @@ export default function ResourcesPage() {
                 onClick={() => setSelectedTag(tag)}
                 className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                   selectedTag === tag
-                    ? 'bg-stone-900 text-white'
+                    ? 'bg-teal-600 text-white'
                     : 'bg-stone-100 text-stone-700 hover:bg-stone-200'
                 }`}
               >

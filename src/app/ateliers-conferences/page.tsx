@@ -47,7 +47,7 @@ export default function WorkshopsPage() {
 
       setSuccess(true);
       (e.target as HTMLFormElement).reset();
-    } catch (err) {
+    } catch {
       setError('Une erreur est survenue. Veuillez réessayer.');
     } finally {
       setLoading(false);
@@ -82,8 +82,8 @@ export default function WorkshopsPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {audiences.map((audience, index) => (
               <Card key={index} className="text-center">
-                <div className="w-14 h-14 bg-stone-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <audience.icon className="w-7 h-7 text-stone-900" />
+                <div className="w-14 h-14 bg-teal-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <audience.icon className="w-7 h-7 text-teal-700" />
                 </div>
                 <h3 className="text-xl font-semibold text-stone-900">
                   {audience.title}
@@ -115,8 +115,8 @@ export default function WorkshopsPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {formats.map((format, index) => (
               <Card key={index} className="text-center">
-                <div className="w-12 h-12 bg-stone-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <format.icon className="w-6 h-6 text-stone-900" />
+                <div className="w-12 h-12 bg-teal-50 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <format.icon className="w-6 h-6 text-teal-700" />
                 </div>
                 <p className="font-medium text-stone-900">{format.title}</p>
               </Card>

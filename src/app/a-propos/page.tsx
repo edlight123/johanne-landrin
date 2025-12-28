@@ -86,8 +86,8 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {values.map((value, index) => (
               <Card key={index} className="text-center">
-                <div className="w-12 h-12 bg-stone-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <value.icon className="w-6 h-6 text-stone-900" />
+                <div className="w-12 h-12 bg-teal-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <value.icon className="w-6 h-6 text-teal-700" />
                 </div>
                 <p className="font-semibold text-stone-900">{value.title}</p>
               </Card>

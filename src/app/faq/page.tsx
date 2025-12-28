@@ -39,9 +39,9 @@ export default function FAQPage() {
         </div>
 
         {/* Contact Note */}
-        <Card className="mt-12 bg-stone-900 text-white text-center">
+        <Card className="mt-12 bg-teal-700 text-white text-center">
           <p className="text-lg mb-4">Vous avez d'autres questions ?</p>
-          <p className="text-stone-300">
+          <p className="text-white/80">
             N'hésitez pas à me contacter directement pour toute question supplémentaire.
           </p>
         </Card>
