@@ -78,7 +78,7 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-black/35" aria-hidden="true" />
         </div>
 
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl">
             <p className="text-white/80 font-medium mb-3 tracking-wide uppercase text-sm">
               {siteConfig.credentials}
