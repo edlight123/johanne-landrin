@@ -80,7 +80,7 @@ export default function HomePage() {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-white leading-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-white leading-tight drop-shadow-md">
               {(() => {
                 const parts = t.home.heroTitle.split(' & ');
                 if (parts.length === 2) {
@@ -95,7 +95,7 @@ export default function HomePage() {
                 return t.home.heroTitle;
               })()}
             </h1>
-            <p className="mt-6 text-lg sm:text-xl text-white/80 leading-relaxed max-w-2xl">
+            <p className="mt-6 text-lg sm:text-xl text-white/80 leading-relaxed max-w-2xl drop-shadow-sm">
               {t.home.heroSubtitle}
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4">

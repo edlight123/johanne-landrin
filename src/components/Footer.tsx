@@ -144,6 +144,14 @@ export default function Footer() {
           <p className="text-sm text-black/70">
             © {currentYear} {siteConfig.name}. {t.footer.rights}
           </p>
+          <a
+            href="https://www.edlight.org/labs"
+            target="_blank"
+            rel="noreferrer"
+            className="text-sm text-black/70 hover:text-black transition-colors"
+          >
+            {t.footer.createdBy}
+          </a>
           <div className="flex flex-wrap items-center justify-center gap-6">
             {siteConfig.features.enableCreole && (
               <div className="flex items-center gap-3">
