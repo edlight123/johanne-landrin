@@ -32,7 +32,9 @@ export const siteConfig = {
   ],
 
   certifications: [
-    'MBTI Certified — The Myers & Briggs Foundation (Issued Nov 2016) — Credential ID: MBTI-2016-T754151',
+    'MBTI Certified (Issued Nov 2016)',
+    'The Myers & Briggs Foundation',
+    'Credential ID: MBTI-2016-T754151',
   ],
   
   // Contact Information
