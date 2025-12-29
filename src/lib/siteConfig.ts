@@ -10,24 +10,23 @@ export const siteConfig = {
   education: [
     {
       institution: 'Walden University',
-      degree:
-        'Master Clinical Psychology - MBA, Health/Medical Psychology',
+      degree: 'M.A. Clinical Psychology · MBA Health/Medical Psychology',
     },
     {
       institution: 'Webster University',
-      degree: 'Master of Business Administration (MBA), General Studies',
+      degree: 'MBA · General Studies',
     },
     {
       institution: 'Saint Leo University',
-      degree: 'Bachelor of Arts (B.A.), Psychology',
+      degree: 'B.A. Psychology',
     },
     {
       institution: 'University of Technology, Jamaica',
-      degree: 'Associate of Arts (A.A.), Business Administration and Management, General',
+      degree: 'A.A. Business Administration & Management',
     },
     {
       institution: 'York University',
-      degree: 'EFST (Emotion Focused Skills Training)',
+      degree: 'EFST · Emotion Focused Skills Training',
     },
   ],
 
