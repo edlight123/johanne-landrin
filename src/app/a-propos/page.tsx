@@ -50,7 +50,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-8 lg:gap-x-10 items-start">
               {/* Photo */}
               <div className="flex flex-col items-center lg:items-start">
-                <div className="relative w-72 h-72 rounded-xl overflow-hidden border border-black/10 bg-teal-50">
+                <div className="relative w-full max-w-72 aspect-square rounded-xl overflow-hidden border border-black/10 bg-teal-50">
                   <Image
                     src={siteConfig.profile.imageUrl}
                     alt={siteConfig.name}
@@ -68,7 +68,7 @@ export default function AboutPage() {
                   </div>
                 </div>
 
-                <div className="mt-6 w-full flex flex-col gap-3">
+                <div className="mt-6 w-full max-w-72 flex flex-col gap-3">
                   <a href={bookingUrl} target="_blank" rel="noreferrer" className="w-full">
                     <Button size="lg" className="w-full">{t.common.bookNow}</Button>
                   </a>

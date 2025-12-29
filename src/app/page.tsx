@@ -49,17 +49,6 @@ export default function HomePage() {
     },
   ];
 
-  const themes = [
-    t.themes.anxiety,
-    t.themes.depression,
-    t.themes.trauma,
-    t.themes.relationships,
-    t.themes.selfEsteem,
-    t.themes.life,
-    t.themes.work,
-    t.themes.grief,
-  ];
-
   return (
     <div>
       {/* JSON-LD Structured Data */}
@@ -191,46 +180,6 @@ export default function HomePage() {
                 </Button>
               </a>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Themes Section */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-semibold text-black mb-4">
-              {t.home.themesTitle}
-            </h2>
-            <p className="text-lg text-black/70 max-w-3xl mx-auto">
-              {t.home.themesSubtitle}
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {themes.map((theme: string) => (
-              <div key={theme} className="p-6 bg-teal-50 rounded-xl border border-black/10">
-                <p className="font-medium text-black">{theme}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact CTA */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl sm:text-3xl font-semibold text-black mb-4">
-            Des questions?
-          </h2>
-          <p className="text-lg text-black/70 mb-7">
-            N'hésitez pas à me contacter pour discuter de vos besoins.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
-              <Button size="lg" variant="outline" className="px-8 py-4 text-lg">
-                Contactez-moi
-              </Button>
-            </Link>
           </div>
         </div>
       </section>
