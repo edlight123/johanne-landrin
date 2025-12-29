@@ -135,7 +135,7 @@ export default function Footer() {
 
         {/* Emergency Notice */}
         <div className="mt-8 pt-8 border-t border-black/10">
-          <p className="text-sm text-black/80 bg-teal-50 border border-black/10 rounded-lg p-4">
+          <p className="text-sm text-black/70">
             <strong className="text-black">{t.emergency.title}:</strong> {t.footer.emergency}
           </p>
         </div>
