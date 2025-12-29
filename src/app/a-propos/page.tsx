@@ -111,15 +111,11 @@ export default function AboutPage() {
                   <GraduationCap className="w-6 h-6 text-teal-700 flex-shrink-0" />
                   <h2 className="text-2xl font-semibold text-black">{t.about.educationTitle}</h2>
                 </div>
-                <div className="mt-5 space-y-4">
+                <div className="mt-6 space-y-6">
                   {siteConfig.education.map((item) => (
-                    <div key={`${item.institution}-${item.degree}`}>
-                      <div className="flex flex-col gap-1">
-                        <p className="font-semibold text-black">{item.institution}</p>
-                        {item.years && <p className="text-sm text-black/60">{item.years}</p>}
-                      </div>
-                      <p className="mt-2 text-black/70">{item.degree}</p>
-                      {item.details && <p className="mt-1 text-sm text-black/60">{item.details}</p>}
+                    <div key={`${item.institution}-${item.degree}`} className="space-y-2">
+                      <p className="text-lg font-semibold text-black">{item.degree}</p>
+                      <p className="text-black/70">{item.institution}</p>
                     </div>
                   ))}
                 </div>
