@@ -30,7 +30,7 @@ export const dictionaries = {
     
     // Home Page
     home: {
-      heroTitle: 'Psychothérapie & accompagnement psychologique',
+      heroTitle: 'Psychothérapie & soutien psychologique',
       heroSubtitle: 'Espace d\'écoute, de soutien et de transformation pour votre bien-être mental',
       heroCTA: 'Prendre rendez-vous',
       heroSecondaryCTA: 'Inviter pour un atelier',
@@ -320,7 +320,7 @@ export const dictionaries = {
     
     // Home Page
     home: {
-      heroTitle: 'Sikoterapi & akonpayman sikolojik',
+      heroTitle: 'Sikoterapi & sipò sikolojik',
       heroSubtitle: 'Espas pou koute, sipò ak transfòmasyon pou byennèt mantal ou',
       heroCTA: 'Pran randevou',
       heroSecondaryCTA: 'Envite pou atelye',
