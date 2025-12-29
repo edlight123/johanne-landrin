@@ -138,26 +138,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Professional Statement */}
-      <section className="py-14 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="rounded-2xl border border-black/10 bg-teal-50 p-8 sm:p-10">
-            <p className="text-base sm:text-lg text-black/70 leading-relaxed">
-              {t.home.heroSubtitle}
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Services Section - Single line */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-semibold text-black mb-4">
-              {t.home.servicesTitle}
+              {t.home.servicesSubtitle}
             </h2>
             <p className="text-lg text-black/70 max-w-3xl mx-auto">
-              {t.home.servicesSubtitle}
+              {t.home.heroSubtitle}
             </p>
           </div>
           <div className="flex gap-6 overflow-x-auto pb-2" aria-label="Services">
