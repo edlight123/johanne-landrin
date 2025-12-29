@@ -65,7 +65,7 @@ export default function LegalPage() {
         {/* Footer Note */}
         <Card className="mt-12 bg-teal-50">
           <p className="text-sm text-black/70 text-center">
-            Pour toute question concernant ces mentions légales, veuillez contacter:{' '}
+            {t.legal.footerNotePrefix}
             <a
               href={`mailto:${siteConfig.contact.email}`}
               className="text-black font-medium hover:underline"

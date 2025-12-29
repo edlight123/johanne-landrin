@@ -18,7 +18,7 @@ export default function Footer() {
             <h3 className="text-lg font-semibold text-black mb-4">
               {siteConfig.name}
             </h3>
-            <p className="text-sm text-black/70 mb-4">{siteConfig.title}</p>
+            <p className="text-sm text-black/70 mb-4">{t.site.role}</p>
           </div>
 
           {/* Contact Info */}
@@ -51,7 +51,7 @@ export default function Footer() {
           {/* Quick Links */}
           <div>
             <h3 className="text-lg font-semibold text-black mb-4">
-              Liens rapides
+              {t.footer.quickLinksTitle}
             </h3>
             <ul className="space-y-2">
               <li>
@@ -92,7 +92,7 @@ export default function Footer() {
           {/* Social Media */}
           <div>
             <h3 className="text-lg font-semibold text-black mb-4">
-              Suivez-moi
+              {t.footer.followTitle}
             </h3>
             <div className="flex gap-3">
               {siteConfig.social.facebook && (
@@ -147,7 +147,7 @@ export default function Footer() {
           <div className="flex flex-wrap items-center justify-center gap-6">
             {siteConfig.features.enableCreole && (
               <div className="flex items-center gap-3">
-                <span className="text-sm text-black/60">Langue</span>
+                <span className="text-sm text-black/60">{t.footer.languageLabel}</span>
                 <button
                   type="button"
                   onClick={() => setLocale('fr')}
@@ -156,9 +156,9 @@ export default function Footer() {
                       ? 'text-black font-medium'
                       : 'text-black/70 hover:text-black'
                   }`}
-                  aria-label="Français"
+                  aria-label={t.footer.languageFrench}
                 >
-                  Français
+                  {t.footer.languageFrench}
                 </button>
                 <span className="text-black/30" aria-hidden="true">
                   /
@@ -171,9 +171,9 @@ export default function Footer() {
                       ? 'text-black font-medium'
                       : 'text-black/70 hover:text-black'
                   }`}
-                  aria-label="Créole"
+                  aria-label={t.footer.languageCreole}
                 >
-                  Créole
+                  {t.footer.languageCreole}
                 </button>
               </div>
             )}

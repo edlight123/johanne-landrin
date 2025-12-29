@@ -21,6 +21,10 @@ export default function ServiceDetailPage() {
 
   const publicLabel = t.services.labels?.public ?? 'Public';
   const formatLabel = t.services.labels?.format ?? 'Format';
+  const forWhoTitle = t.services.detail?.forWhoTitle ?? 'Pour qui';
+  const formatsTitle = t.services.detail?.formatsTitle ?? 'Formats (cabinet / en ligne)';
+  const cabinetLabel = t.services.detail?.cabinetLabel ?? 'Cabinet';
+  const onlineLabel = t.services.detail?.onlineLabel ?? 'En ligne';
 
   if (!service) {
     return (
@@ -31,8 +35,8 @@ export default function ServiceDetailPage() {
               <ArrowLeft className="w-4 h-4 mr-2" />
               {t.services.backToServices ?? 'Retour aux services'}
             </Link>
-            <h1 className="mt-6 text-3xl sm:text-4xl font-semibold text-black">Service introuvable</h1>
-            <p className="mt-3 text-black/70">Ce service n’existe pas ou a été déplacé.</p>
+            <h1 className="mt-6 text-3xl sm:text-4xl font-semibold text-black">{t.services.notFoundTitle}</h1>
+            <p className="mt-3 text-black/70">{t.services.notFoundText}</p>
           </div>
         </section>
       </div>
@@ -79,10 +83,10 @@ export default function ServiceDetailPage() {
 
           <div className="mt-10 grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-8 items-start">
             <div className="max-w-3xl">
-              <h2 className="text-2xl font-semibold text-black">Intro / objectif</h2>
+              <h2 className="text-2xl font-semibold text-black">{t.services.detail.introTitle}</h2>
               <p className="mt-3 text-black/70 leading-relaxed">{service.introObjective}</p>
 
-              <h2 className="mt-10 text-2xl font-semibold text-black">Déroulé</h2>
+              <h2 className="mt-10 text-2xl font-semibold text-black">{t.services.detail.stepsTitle}</h2>
               <ol className="mt-4 space-y-3 list-decimal pl-5 text-black/70">
                 {service.steps.map((step) => (
                   <li key={step} className="leading-relaxed">
@@ -91,11 +95,11 @@ export default function ServiceDetailPage() {
                 ))}
               </ol>
 
-              <h2 className="mt-10 text-2xl font-semibold text-black">Durée & fréquence</h2>
+              <h2 className="mt-10 text-2xl font-semibold text-black">{t.services.detail.durationTitle}</h2>
               <p className="mt-3 text-black/70 leading-relaxed">{service.durationFrequency}</p>
 
               <h2 className="mt-10 text-2xl font-semibold text-black">
-                Ce que vous pouvez en attendre
+                {t.services.detail.expectationsTitle}
               </h2>
               <ul className="mt-4 list-disc pl-5 space-y-2 text-black/70">
                 {service.expectations.map((item) => (
@@ -110,23 +114,23 @@ export default function ServiceDetailPage() {
               <Card className="rounded-lg bg-white border border-black/10 shadow-sm">
                 <div className="space-y-5">
                   <div>
-                    <p className="text-sm font-medium text-black">Pour qui</p>
+                    <p className="text-sm font-medium text-black">{forWhoTitle}</p>
                     <p className="mt-2 text-black/70">
                       {service.audienceDetails ?? service.audienceLabel}
                     </p>
                   </div>
 
                   <div>
-                    <p className="text-sm font-medium text-black">Formats (cabinet / en ligne)</p>
+                    <p className="text-sm font-medium text-black">{formatsTitle}</p>
                     <div className="mt-2 space-y-2 text-black/70">
                       {service.formats.cabinet && (
                         <p>
-                          <span className="font-medium text-black">Cabinet:</span> {service.formats.cabinet}
+                          <span className="font-medium text-black">{cabinetLabel}:</span> {service.formats.cabinet}
                         </p>
                       )}
                       {service.formats.online && (
                         <p>
-                          <span className="font-medium text-black">En ligne:</span> {service.formats.online}
+                          <span className="font-medium text-black">{onlineLabel}:</span> {service.formats.online}
                         </p>
                       )}
                     </div>
@@ -144,18 +148,18 @@ export default function ServiceDetailPage() {
               </Card>
 
               <Card className="rounded-lg bg-teal-50 border border-black/10 shadow-sm">
-                <h3 className="text-lg font-semibold text-black">Prendre la prochaine étape</h3>
+                <h3 className="text-lg font-semibold text-black">{t.services.detail.nextStepTitle}</h3>
                 <p className="mt-2 text-sm text-black/70">
                   {service.slug === 'ateliers-conferences'
-                    ? "Parlez-moi de votre contexte et de vos objectifs, et je vous proposerai un format adapté."
-                    : "Réservez un premier rendez-vous pour clarifier vos besoins et définir le cadre ensemble."}
+                    ? t.services.detail.nextStepWorkshopText
+                    : t.services.detail.nextStepDefaultText}
                 </p>
                 <div className="mt-5 flex flex-col gap-3">
                   {service.slug === 'ateliers-conferences' ? (
                     <>
                       <Link href="/ateliers-conferences">
                         <Button size="lg" className="w-full">
-                          Voir les ateliers
+                          {t.services.detail.viewWorkshopsButton}
                           <ArrowRight className="ml-2 w-5 h-5" />
                         </Button>
                       </Link>

@@ -20,7 +20,7 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="text-4xl sm:text-5xl font-semibold text-black leading-tight">
-              Services
+              {t.services.title}
             </h1>
             <p className="mt-4 text-lg text-black/70 leading-relaxed">
               {t.services.subtitle}
@@ -66,10 +66,10 @@ export default function ServicesPage() {
           {/* Keep bottom CTA */}
           <div className="mt-16 rounded-2xl border border-black/10 bg-teal-50 p-10 text-center">
             <h2 className="text-2xl sm:text-3xl font-semibold text-black">
-              Commencez votre parcours aujourd'hui
+              {t.services.bottomCtaTitle}
             </h2>
             <p className="mt-3 text-lg text-black/70 max-w-2xl mx-auto">
-              Prenez rendez-vous pour une première consultation et découvrez comment nous pouvons vous accompagner.
+              {t.services.bottomCtaText}
             </p>
             <div className="mt-7">
               <a href={bookingUrl} target="_blank" rel="noreferrer">

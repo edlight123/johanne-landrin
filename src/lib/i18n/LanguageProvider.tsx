@@ -9,7 +9,9 @@ type LanguageContextType = {
   t: ReturnType<typeof getDictionary>;
 };
 
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+export type { LanguageContextType };
+
+export const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [locale, setLocaleState] = useState<Locale>('fr');

@@ -68,7 +68,7 @@ export default function Header() {
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="lg:hidden p-2 text-black/70 hover:text-black hover:bg-teal-50 rounded-lg"
-              aria-label="Toggle menu"
+              aria-label={t.common.toggleMenu}
             >
               {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>

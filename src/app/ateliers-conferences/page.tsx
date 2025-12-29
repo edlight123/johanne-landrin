@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { Building2, School, Send, Users } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageProvider';
-import { siteConfig } from '@/lib/siteConfig';
 import Card from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
 import Input from '@/components/ui/Input';
@@ -26,12 +25,12 @@ export default function WorkshopsPage() {
   const validateWorkshop = (data: Record<string, FormDataEntryValue>) => {
     const requiredKeys = ['orgName', 'contactName', 'email', 'phone', 'date', 'audience', 'location', 'message'];
     for (const key of requiredKeys) {
-      if (!String(data[key] ?? '').trim()) return 'Merci de compléter tous les champs requis.';
+      if (!String(data[key] ?? '').trim()) return t.forms.errors.missingRequired;
     }
 
     const email = String(data.email ?? '').trim();
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) return 'Merci d’indiquer une adresse e-mail valide.';
+    if (!emailRegex.test(email)) return t.forms.errors.invalidEmail;
 
     return '';
   };
@@ -63,7 +62,7 @@ export default function WorkshopsPage() {
       setWorkshopSuccess(true);
       (e.target as HTMLFormElement).reset();
     } catch {
-      setWorkshopError('Une erreur est survenue. Veuillez réessayer.');
+      setWorkshopError(t.forms.errors.generic);
     } finally {
       setWorkshopLoading(false);
     }
@@ -109,7 +108,7 @@ export default function WorkshopsPage() {
               <Card className="rounded-lg bg-card border shadow-sm ring-0">
                 <h2 className="text-lg font-semibold text-foreground">{t.workshops.topicsTitle}</h2>
                 <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {siteConfig.workshopTopics.map((topic) => (
+                  {t.workshops.topicsList.map((topic) => (
                     <div key={topic} className="rounded-lg border border-black/10 bg-card p-4">
                       <p className="text-muted-foreground">{topic}</p>
                     </div>
@@ -122,7 +121,7 @@ export default function WorkshopsPage() {
               <Card className="rounded-lg bg-card border shadow-sm ring-0">
                 <h2 className="text-2xl font-semibold text-foreground">{t.workshops.inquiryTitle}</h2>
                 <p className="mt-2 text-muted-foreground">
-                  Décrivez votre besoin et je vous recontacte pour préciser le format, le contenu et les modalités.
+                  {t.workshops.inquiryIntro}
                 </p>
 
                 <div className="mt-8">
@@ -139,7 +138,7 @@ export default function WorkshopsPage() {
                         name="orgName"
                         label={t.workshops.orgName}
                         required
-                        placeholder="Nom de votre organisation"
+                        placeholder={t.workshops.placeholders.orgName}
                       />
 
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -147,7 +146,7 @@ export default function WorkshopsPage() {
                           name="contactName"
                           label={t.workshops.contactName}
                           required
-                          placeholder="Votre nom"
+                          placeholder={t.workshops.placeholders.contactName}
                         />
 
                         <Input
@@ -165,7 +164,7 @@ export default function WorkshopsPage() {
                           type="tel"
                           label={t.workshops.phone}
                           required
-                          placeholder="+509 XXXX-XXXX"
+                          placeholder={t.workshops.placeholders.phone}
                         />
 
                         <Input name="date" type="date" label={t.workshops.date} required />
@@ -176,24 +175,24 @@ export default function WorkshopsPage() {
                           name="audience"
                           label={t.workshops.audience}
                           required
-                          placeholder="Ex: 30-50 personnes"
+                          placeholder={t.workshops.placeholders.audience}
                         />
 
-                        <Input name="budget" label={t.workshops.budget} placeholder="Budget estimé" />
+                        <Input name="budget" label={t.workshops.budget} placeholder={t.workshops.placeholders.budget} />
                       </div>
 
                       <Input
                         name="location"
                         label={t.workshops.location}
                         required
-                        placeholder="Ville ou région"
+                        placeholder={t.workshops.placeholders.location}
                       />
 
                       <Textarea
                         name="message"
                         label={t.workshops.message}
                         required
-                        placeholder="Décrivez vos besoins, objectifs, et toute information pertinente..."
+                        placeholder={t.workshops.placeholders.message}
                         rows={6}
                       />
 

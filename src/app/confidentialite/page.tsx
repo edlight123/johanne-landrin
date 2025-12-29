@@ -64,7 +64,7 @@ export default function PrivacyPage() {
 
         {/* Last Updated */}
         <div className="mt-12 text-center text-sm text-black/60">
-          Dernière mise à jour: Janvier 2024
+          {t.privacy.lastUpdated}
         </div>
       </div>
     </div>

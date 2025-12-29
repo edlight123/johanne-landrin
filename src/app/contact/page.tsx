@@ -24,20 +24,20 @@ export default function ContactPage() {
       <section className="py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="text-4xl sm:text-5xl font-semibold leading-tight">Cabinet & Contact</h1>
+            <h1 className="text-4xl sm:text-5xl font-semibold leading-tight">{t.office.title}</h1>
             <p className="mt-3 text-lg text-muted-foreground">{t.office.subtitle}</p>
           </div>
 
           <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
             <SelectableCard
-              title="Cabinet"
-              description="Rendez-vous, coordonnées, adresse et horaires."
+              title={t.office.selectionCabinetTitle}
+              description={t.office.selectionCabinetDescription}
               isActive={active === 'cabinet'}
               onClick={() => onToggle('cabinet')}
             />
             <SelectableCard
-              title="Ateliers & conférences"
-              description="Interventions pour organisations et collectivités."
+              title={t.office.selectionWorkshopsTitle}
+              description={t.office.selectionWorkshopsDescription}
               isActive={active === 'ateliers'}
               onClick={() => onToggle('ateliers')}
             />
@@ -126,12 +126,12 @@ function CabinetPanel({ bookingUrl }: { bookingUrl: string }) {
     const message = String(data.message ?? '').trim();
 
     if (!name || !email || !subject || !message) {
-      return 'Merci de compléter tous les champs requis.';
+      return t.forms.errors.missingRequired;
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-      return 'Merci d’indiquer une adresse e-mail valide.';
+      return t.forms.errors.invalidEmail;
     }
 
     return '';
@@ -164,7 +164,7 @@ function CabinetPanel({ bookingUrl }: { bookingUrl: string }) {
       setContactSuccess(true);
       (e.target as HTMLFormElement).reset();
     } catch {
-      setContactError('Une erreur est survenue. Veuillez réessayer.');
+      setContactError(t.forms.errors.generic);
     } finally {
       setContactLoading(false);
     }
@@ -174,8 +174,8 @@ function CabinetPanel({ bookingUrl }: { bookingUrl: string }) {
     <div className="rounded-lg bg-card border shadow-sm p-6">
       <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
         <div>
-          <p className="text-lg font-semibold">Cabinet</p>
-          <p className="mt-1 text-sm text-muted-foreground">Prise de rendez-vous et informations pratiques.</p>
+          <p className="text-lg font-semibold">{t.office.cabinetPanelTitle}</p>
+          <p className="mt-1 text-sm text-muted-foreground">{t.office.cabinetPanelSubtitle}</p>
         </div>
 
         <div className="flex-shrink-0">
@@ -194,14 +194,14 @@ function CabinetPanel({ bookingUrl }: { bookingUrl: string }) {
           className="rounded-lg bg-card border shadow-sm px-4 py-3 flex items-center gap-3"
         >
           <Phone className="w-4 h-4 text-teal-700" />
-          <span className="text-sm font-medium">Téléphone</span>
+          <span className="text-sm font-medium">{t.office.phoneLabel}</span>
         </a>
         <a
           href={`mailto:${siteConfig.contact.email}`}
           className="rounded-lg bg-card border shadow-sm px-4 py-3 flex items-center gap-3"
         >
           <Mail className="w-4 h-4 text-teal-700" />
-          <span className="text-sm font-medium">E-mail</span>
+          <span className="text-sm font-medium">{t.office.emailLabel}</span>
         </a>
         <a
           href={`https://wa.me/${siteConfig.contact.whatsapp.replace(/\D/g, '')}`}
@@ -210,7 +210,7 @@ function CabinetPanel({ bookingUrl }: { bookingUrl: string }) {
           className="rounded-lg bg-card border shadow-sm px-4 py-3 flex items-center gap-3"
         >
           <Phone className="w-4 h-4 text-teal-700" />
-          <span className="text-sm font-medium">WhatsApp</span>
+          <span className="text-sm font-medium">{t.office.whatsappLabel}</span>
         </a>
       </div>
 
@@ -228,13 +228,13 @@ function CabinetPanel({ bookingUrl }: { bookingUrl: string }) {
             <Clock className="w-4 h-4 text-teal-700" />
             {t.office.hoursTitle}
           </p>
-          <p className="mt-3 text-sm text-muted-foreground">{siteConfig.office.hours}</p>
+          <p className="mt-3 text-sm text-muted-foreground">{t.office.hoursValue}</p>
         </div>
       </div>
 
       <div className="mt-10">
         <p className="text-sm font-semibold">{t.office.contactFormTitle}</p>
-        <p className="mt-2 text-sm text-muted-foreground">Optionnel — pour une demande non urgente.</p>
+        <p className="mt-2 text-sm text-muted-foreground">{t.office.optionalNote}</p>
 
         <div className="mt-6">
           {contactSuccess ? (
@@ -247,12 +247,12 @@ function CabinetPanel({ bookingUrl }: { bookingUrl: string }) {
           ) : (
             <form onSubmit={handleContactSubmit} className="space-y-5">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                <Input name="name" label={t.office.name} required placeholder="Votre nom" />
-                <Input name="email" type="email" label={t.office.email} required placeholder="exemple@email.com" />
+                <Input name="name" label={t.office.name} required placeholder={t.office.placeholders.name} />
+                <Input name="email" type="email" label={t.office.email} required placeholder={t.office.placeholders.email} />
               </div>
 
-              <Input name="subject" label={t.office.subject} required placeholder="Objet" />
-              <Textarea name="message" label={t.office.message} required placeholder="Votre message..." rows={5} />
+              <Input name="subject" label={t.office.subject} required placeholder={t.office.placeholders.subject} />
+              <Textarea name="message" label={t.office.message} required placeholder={t.office.placeholders.message} rows={5} />
 
               <input type="text" name="website" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
 
@@ -286,12 +286,12 @@ function AteliersPanel() {
   const validateWorkshop = (data: Record<string, FormDataEntryValue>) => {
     const requiredKeys = ['orgName', 'contactName', 'email', 'phone', 'date', 'audience', 'location', 'message'];
     for (const key of requiredKeys) {
-      if (!String(data[key] ?? '').trim()) return 'Merci de compléter tous les champs requis.';
+      if (!String(data[key] ?? '').trim()) return t.forms.errors.missingRequired;
     }
 
     const email = String(data.email ?? '').trim();
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) return 'Merci d’indiquer une adresse e-mail valide.';
+    if (!emailRegex.test(email)) return t.forms.errors.invalidEmail;
 
     return '';
   };
@@ -323,7 +323,7 @@ function AteliersPanel() {
       setWorkshopSuccess(true);
       (e.target as HTMLFormElement).reset();
     } catch {
-      setWorkshopError('Une erreur est survenue. Veuillez réessayer.');
+      setWorkshopError(t.forms.errors.generic);
     } finally {
       setWorkshopLoading(false);
     }
@@ -331,7 +331,7 @@ function AteliersPanel() {
 
   return (
     <div className="rounded-lg bg-card border shadow-sm p-6">
-      <p className="text-lg font-semibold">Ateliers & conférences</p>
+      <p className="text-lg font-semibold">{t.office.selectionWorkshopsTitle}</p>
       <p className="mt-1 text-sm text-muted-foreground">{t.workshops.subtitle}</p>
 
       <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -360,7 +360,7 @@ function AteliersPanel() {
           <div className="rounded-lg bg-card border shadow-sm p-5">
             <p className="text-sm font-semibold">{t.workshops.topicsTitle}</p>
             <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {siteConfig.workshopTopics.slice(0, 6).map((topic) => (
+              {t.workshops.topicsList.slice(0, 6).map((topic) => (
                 <div key={topic} className="rounded-lg bg-card border shadow-sm px-3 py-2">
                   <p className="text-sm text-muted-foreground">{topic}</p>
                 </div>
@@ -371,7 +371,7 @@ function AteliersPanel() {
 
         <div className="rounded-lg bg-card border shadow-sm p-5">
           <p className="text-sm font-semibold">{t.workshops.inquiryTitle}</p>
-          <p className="mt-2 text-sm text-muted-foreground">Formulaire de demande pour votre organisation.</p>
+          <p className="mt-2 text-sm text-muted-foreground">{t.workshops.inquiryIntro}</p>
 
           <div className="mt-6">
             {workshopSuccess ? (
@@ -383,25 +383,25 @@ function AteliersPanel() {
               </Alert>
             ) : (
               <form onSubmit={handleWorkshopSubmit} className="space-y-5">
-                <Input name="orgName" label={t.workshops.orgName} required placeholder="Organisation" />
+                <Input name="orgName" label={t.workshops.orgName} required placeholder={t.workshops.placeholders.orgName} />
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <Input name="contactName" label={t.workshops.contactName} required placeholder="Nom" />
-                  <Input name="email" type="email" label={t.workshops.email} required placeholder="exemple@email.com" />
+                  <Input name="contactName" label={t.workshops.contactName} required placeholder={t.workshops.placeholders.contactName} />
+                  <Input name="email" type="email" label={t.workshops.email} required placeholder={t.workshops.placeholders.email} />
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <Input name="phone" type="tel" label={t.workshops.phone} required placeholder="+509 XXXX-XXXX" />
+                  <Input name="phone" type="tel" label={t.workshops.phone} required placeholder={t.workshops.placeholders.phone} />
                   <Input name="date" type="date" label={t.workshops.date} required />
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <Input name="audience" label={t.workshops.audience} required placeholder="Ex: 30-50" />
-                  <Input name="budget" label={t.workshops.budget} placeholder="Optionnel" />
+                  <Input name="audience" label={t.workshops.audience} required placeholder={t.workshops.placeholders.audience} />
+                  <Input name="budget" label={t.workshops.budget} placeholder={t.workshops.placeholders.budget} />
                 </div>
 
-                <Input name="location" label={t.workshops.location} required placeholder="Ville ou région" />
-                <Textarea name="message" label={t.workshops.message} required placeholder="Votre demande..." rows={5} />
+                <Input name="location" label={t.workshops.location} required placeholder={t.workshops.placeholders.location} />
+                <Textarea name="message" label={t.workshops.message} required placeholder={t.workshops.placeholders.message} rows={5} />
 
                 <input type="text" name="website" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
 

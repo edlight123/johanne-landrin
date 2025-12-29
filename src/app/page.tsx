@@ -116,7 +116,7 @@ export default function HomePage() {
                   size="lg"
                   className="w-full px-7 py-3 text-base sm:text-lg border-white/60 text-white hover:bg-white/10"
                 >
-                  En savoir plus
+                  {t.common.learnMore}
                 </Button>
               </Link>
             </div>
@@ -135,7 +135,7 @@ export default function HomePage() {
               {t.home.heroSubtitle}
             </p>
           </div>
-          <div className="flex gap-6 overflow-x-auto pb-2" aria-label="Services">
+          <div className="flex gap-6 overflow-x-auto pb-2" aria-label={t.home.servicesTitle}>
             {services.map((service) => (
               <Link
                 key={service.title}
@@ -164,15 +164,15 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="rounded-2xl border border-black/10 bg-teal-50 p-10 text-center">
             <h2 className="text-2xl sm:text-3xl font-semibold text-black">
-              Prêt à commencer votre parcours?
+              {t.home.ctaTitle}
             </h2>
             <p className="mt-3 text-lg text-black/70 max-w-2xl mx-auto">
-              Prenez rendez-vous dès aujourd'hui pour une consultation personnalisée.
+              {t.home.ctaText}
             </p>
             <div className="mt-7">
               <a href={bookingUrl} target="_blank" rel="noreferrer">
                 <Button size="lg" className="px-8">
-                  Prendre rendez-vous
+                  {t.home.ctaButton}
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </a>
