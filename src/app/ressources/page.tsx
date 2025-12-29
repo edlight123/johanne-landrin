@@ -31,6 +31,63 @@ const samplePosts = [
   },
 ];
 
+const externalResources = [
+  {
+    org: 'Organisation mondiale de la Santé (OMS)'
+    ,
+    title: 'Santé mentale'
+    ,
+    description: 'Aperçu des enjeux, déterminants et pistes d’action en santé mentale.'
+    ,
+    href: 'https://www.who.int/health-topics/mental-health'
+  },
+  {
+    org: 'National Institute of Mental Health (NIMH)'
+    ,
+    title: 'Mental Health Information'
+    ,
+    description: 'Fiches et ressources fiables sur les troubles psychiques et les soins.'
+    ,
+    href: 'https://www.nimh.nih.gov/health'
+  },
+  {
+    org: 'American Psychological Association (APA)'
+    ,
+    title: 'Psychotherapy'
+    ,
+    description: 'Comprendre la psychothérapie, ses objectifs et ce à quoi s’attendre.'
+    ,
+    href: 'https://www.apa.org/topics/psychotherapy'
+  },
+  {
+    org: 'Centers for Disease Control and Prevention (CDC)'
+    ,
+    title: 'Mental Health'
+    ,
+    description: 'Informations et recommandations de santé publique liées à la santé mentale.'
+    ,
+    href: 'https://www.cdc.gov/mentalhealth/index.htm'
+  },
+  {
+    org: 'NHS (Royaume-Uni)'
+    ,
+    title: 'Mental health'
+    ,
+    description: 'Guides pratiques et orientations pour chercher de l’aide et des soins.'
+    ,
+    href: 'https://www.nhs.uk/mental-health/'
+  },
+  {
+    org: 'UNICEF'
+    ,
+    title: 'Santé mentale des adolescents'
+    ,
+    description: 'Ressources et repères sur le bien-être psychologique des jeunes.'
+    ,
+    href: 'https://www.unicef.org/health/mental-health'
+  },
+];
+
 export default function ResourcesPage() {
   const { t } = useLanguage();
   const [searchTerm, setSearchTerm] = useState('');
@@ -139,6 +196,37 @@ export default function ResourcesPage() {
             <p className="text-lg text-black/70">{t.resources.noResults}</p>
           </div>
         )}
+
+        {/* Recommended external resources */}
+        <div className="mt-16">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl sm:text-3xl font-semibold text-black">
+              Ressources recommandées
+            </h2>
+            <p className="mt-3 text-lg text-black/70">
+              Sélection de ressources fiables d’organisations reconnues.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {externalResources.map((resource) => (
+              <a
+                key={resource.href}
+                href={resource.href}
+                target="_blank"
+                rel="noreferrer"
+                className="block"
+              >
+                <Card hover className="h-full">
+                  <p className="text-sm font-medium text-black/60">{resource.org}</p>
+                  <h3 className="mt-2 text-lg font-semibold text-black">{resource.title}</h3>
+                  <p className="mt-2 text-black/70">{resource.description}</p>
+                  <p className="mt-4 text-sm font-medium text-teal-700">Ouvrir →</p>
+                </Card>
+              </a>
+            ))}
+          </div>
+        </div>
 
         {/* Info Note */}
         <Card className="mt-12 bg-teal-50 max-w-3xl mx-auto">

@@ -64,7 +64,7 @@ export const siteConfig = {
   // Social Media
   social: {
     facebook: "",
-    instagram: "",
+    instagram: "https://www.instagram.com/jolandrin/?hl=en",
     linkedin: "https://linkedin.com/in/johanne-landrin-44a3742",
   },
   
