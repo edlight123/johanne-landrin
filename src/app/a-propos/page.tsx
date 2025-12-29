@@ -98,17 +98,17 @@ export default function AboutPage() {
             </div>
 
             {/* Right: education, certifications, specializations */}
-            <aside className="space-y-6">
+            <aside className="space-y-4">
               <Card>
                 <div className="flex items-center gap-3">
                   <GraduationCap className="w-6 h-6 text-teal-700 flex-shrink-0" />
-                  <h2 className="text-2xl font-semibold text-black">{t.about.educationTitle}</h2>
+                  <h2 className="text-xl font-semibold text-black">{t.about.educationTitle}</h2>
                 </div>
-                <div className="mt-6 space-y-6">
+                <div className="mt-4 space-y-4">
                   {siteConfig.education.map((item) => (
-                    <div key={`${item.institution}-${item.degree}`} className="space-y-2">
-                      <p className="text-lg font-semibold text-black">{item.degree}</p>
-                      <p className="text-black/70">{item.institution}</p>
+                    <div key={`${item.institution}-${item.degree}`} className="space-y-1">
+                      <p className="text-base font-semibold text-black leading-snug">{item.degree}</p>
+                      <p className="text-sm text-black/70 leading-snug">{item.institution}</p>
                     </div>
                   ))}
                 </div>
@@ -118,11 +118,11 @@ export default function AboutPage() {
                 <Card>
                   <div className="flex items-center gap-3">
                     <Shield className="w-6 h-6 text-teal-700 flex-shrink-0" />
-                    <h2 className="text-xl sm:text-2xl font-semibold text-black whitespace-nowrap">
+                    <h2 className="text-xl font-semibold text-black whitespace-nowrap">
                       {t.about.certificationsTitle}
                     </h2>
                   </div>
-                  <div className="mt-5 space-y-2 text-black/70">
+                  <div className="mt-4 space-y-1 text-sm text-black/70">
                     {siteConfig.certifications.map((c) => (
                       <p key={c}>{c}</p>
                     ))}
@@ -133,9 +133,9 @@ export default function AboutPage() {
               <Card>
                 <div className="flex items-center gap-3">
                   <Users className="w-6 h-6 text-teal-700 flex-shrink-0" />
-                  <h2 className="text-2xl font-semibold text-black">{t.about.specializationsTitle}</h2>
+                  <h2 className="text-xl font-semibold text-black">{t.about.specializationsTitle}</h2>
                 </div>
-                <div className="mt-5 space-y-2 text-black/70">
+                <div className="mt-4 space-y-1 text-sm text-black/70">
                   {themes.map((theme) => (
                     <p key={theme}>{theme}</p>
                   ))}
