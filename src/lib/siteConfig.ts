@@ -9,20 +9,25 @@ export const siteConfig = {
 
   education: [
     {
-      institution: 'Harvard Medical School',
-      degree: 'MD',
+      institution: 'Walden University',
+      degree:
+        'Master Clinical Psychology - MBA, Health/Medical Psychology',
     },
     {
-      institution: 'Yale School of Medicine',
-      degree: 'Psychiatry Residency',
+      institution: 'Webster University',
+      degree: 'Master of Business Administration (MBA), General Studies',
     },
     {
-      institution: 'Harvard Kennedy School',
-      degree: 'MPP (Master of Public Policy)',
+      institution: 'Saint Leo University',
+      degree: 'Bachelor of Arts (B.A.), Psychology',
     },
     {
-      institution: 'William Alanson White Institute',
-      degree: 'Psychoanalytic Training',
+      institution: 'University of Technology, Jamaica',
+      degree: 'Associate of Arts (A.A.), Business Administration and Management, General',
+    },
+    {
+      institution: 'York University',
+      degree: 'EFST (Emotion Focused Skills Training)',
     },
   ],
 
