@@ -31,9 +31,6 @@ export default function Header() {
               <div className="text-xl lg:text-2xl font-semibold text-black">
                 {siteConfig.name}
               </div>
-              <div className="text-xs lg:text-sm text-black/70">
-                {siteConfig.title}
-              </div>
             </div>
           </Link>
 

@@ -80,9 +80,6 @@ export default function HomePage() {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl">
-            <p className="text-white/80 font-medium mb-3 tracking-wide uppercase text-sm">
-              {siteConfig.credentials}
-            </p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-white leading-tight">
               {(() => {
                 const parts = t.home.heroTitle.split(' & ');
