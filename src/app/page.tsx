@@ -68,11 +68,11 @@ export default function HomePage() {
       />
 
       {/* Hero Section - With waiting room background */}
-      <section className="relative py-16 sm:py-20 lg:py-24 overflow-hidden">
+      <section className="relative py-20 sm:py-24 lg:py-28 overflow-hidden">
         <div className="absolute inset-0">
           <div
             className="absolute inset-0 bg-center bg-cover"
-            style={{ backgroundImage: "url('/office-2.png')" }}
+            style={{ backgroundImage: "url('/office-3.png')" }}
             aria-hidden="true"
           />
           <div className="absolute inset-0 bg-black/35" aria-hidden="true" />

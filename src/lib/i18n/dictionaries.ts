@@ -31,7 +31,7 @@ export const dictionaries = {
     // Home Page
     home: {
       heroTitle: 'Psychothérapie & soutien psychologique',
-      heroSubtitle: 'Espace d\'écoute, de soutien et de transformation pour votre bien-être mental',
+      heroSubtitle: 'Un accompagnement psychothérapeutique expert dans un environnement chaleureux et bienveillant. Commencez votre chemin vers l’apaisement et l’épanouissement.',
       heroCTA: 'Prendre rendez-vous',
       heroSecondaryCTA: 'Inviter pour un atelier',
       servicesTitle: 'Services',
@@ -321,7 +321,7 @@ export const dictionaries = {
     // Home Page
     home: {
       heroTitle: 'Sikoterapi & sipò sikolojik',
-      heroSubtitle: 'Espas pou koute, sipò ak transfòmasyon pou byennèt mantal ou',
+      heroSubtitle: 'Yon sipò sikoterapetik pwofesyonèl nan yon anviwònman cho epi ki ankourajan. Kòmanse chemen ou pou plis lapè ak devlopman pèsonèl.',
       heroCTA: 'Pran randevou',
       heroSecondaryCTA: 'Envite pou atelye',
       servicesTitle: 'Sèvis',
