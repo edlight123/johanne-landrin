@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   title: siteConfig.seo.title,
   description: siteConfig.seo.description,
   keywords: siteConfig.seo.keywords,
+  icons: {
+    icon: [{ url: '/icon.svg', type: 'image/svg+xml' }],
+  },
   openGraph: {
     title: siteConfig.seo.title,
     description: siteConfig.seo.description,
