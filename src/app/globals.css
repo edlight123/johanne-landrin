@@ -10,6 +10,10 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-inter);
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  /* Surface + muted text tokens (for token-based utility classes) */
+  --color-card: #ffffff;
+  --color-muted-foreground: var(--color-neutral-700);
   
   /* Softer color palette */
   --color-primary: #0d9488;
