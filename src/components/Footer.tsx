@@ -6,7 +6,7 @@ import { useLanguage } from '@/lib/i18n/LanguageProvider';
 import { siteConfig } from '@/lib/siteConfig';
 
 export default function Footer() {
-  const { t } = useLanguage();
+  const { t, locale, setLocale } = useLanguage();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -19,7 +19,6 @@ export default function Footer() {
               {siteConfig.name}
             </h3>
             <p className="text-sm text-black/70 mb-4">{siteConfig.title}</p>
-            <p className="text-sm text-black/70">{siteConfig.credentials}</p>
           </div>
 
           {/* Contact Info */}
@@ -134,7 +133,7 @@ export default function Footer() {
         </div>
 
         {/* Emergency Notice */}
-        <div className="mt-8 pt-8 border-t border-black/10">
+        <div className="mt-8">
           <p className="text-sm text-black/70">
             <strong className="text-black">{t.emergency.title}:</strong> {t.footer.emergency}
           </p>
@@ -145,7 +144,40 @@ export default function Footer() {
           <p className="text-sm text-black/70">
             © {currentYear} {siteConfig.name}. {t.footer.rights}
           </p>
-          <div className="flex gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-6">
+            {siteConfig.features.enableCreole && (
+              <div className="flex items-center gap-3">
+                <span className="text-sm text-black/60">Langue</span>
+                <button
+                  type="button"
+                  onClick={() => setLocale('fr')}
+                  className={`text-sm transition-colors ${
+                    locale === 'fr'
+                      ? 'text-black font-medium'
+                      : 'text-black/70 hover:text-black'
+                  }`}
+                  aria-label="Français"
+                >
+                  Français
+                </button>
+                <span className="text-black/30" aria-hidden="true">
+                  /
+                </span>
+                <button
+                  type="button"
+                  onClick={() => setLocale('kr')}
+                  className={`text-sm transition-colors ${
+                    locale === 'kr'
+                      ? 'text-black font-medium'
+                      : 'text-black/70 hover:text-black'
+                  }`}
+                  aria-label="Créole"
+                >
+                  Créole
+                </button>
+              </div>
+            )}
+
             <Link
               href="/confidentialite"
               className="text-sm text-black/70 hover:text-black transition-colors"

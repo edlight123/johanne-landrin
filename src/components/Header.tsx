@@ -7,7 +7,7 @@ import { useLanguage } from '@/lib/i18n/LanguageProvider';
 import { siteConfig } from '@/lib/siteConfig';
 
 export default function Header() {
-  const { locale, setLocale, t } = useLanguage();
+  const { t } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const bookingUrl = siteConfig.booking.calendlyUrl;
@@ -38,7 +38,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-1">
+          <div className="hidden lg:flex items-center gap-1 ml-auto">
             {navigation
               .filter((item) => !('isPrimary' in item))
               .map((item) => (
@@ -59,43 +59,15 @@ export default function Header() {
                   href={item.href}
                   target={item.external ? '_blank' : undefined}
                   rel={item.external ? 'noreferrer' : undefined}
-                  className="ml-2 inline-flex items-center justify-center rounded-lg bg-teal-600 px-4 py-2 text-sm font-medium text-white hover:bg-teal-700 transition-colors"
+                  className="ml-2 inline-flex items-center justify-center rounded-lg bg-teal-600 px-4 py-2.5 text-sm font-medium text-white hover:bg-teal-700 transition-colors"
                 >
                   {item.name}
                 </a>
               ))}
           </div>
 
-          {/* Language Switcher & Mobile Menu Button */}
+          {/* Mobile Menu Button */}
           <div className="flex items-center gap-2">
-            {siteConfig.features.enableCreole && (
-              <div className="flex items-center gap-1 bg-teal-50 border border-black/10 rounded-lg p-1">
-                <button
-                  onClick={() => setLocale('fr')}
-                  className={`px-2 py-1 text-sm font-medium rounded transition-colors ${
-                    locale === 'fr'
-                      ? 'bg-white text-black shadow-sm'
-                      : 'text-black/60 hover:text-black'
-                  }`}
-                  aria-label="French"
-                >
-                  FR
-                </button>
-                <button
-                  onClick={() => setLocale('kr')}
-                  className={`px-2 py-1 text-sm font-medium rounded transition-colors ${
-                    locale === 'kr'
-                      ? 'bg-white text-black shadow-sm'
-                      : 'text-black/60 hover:text-black'
-                  }`}
-                  aria-label="Kreyòl"
-                >
-                  KR
-                </button>
-              </div>
-            )}
-
-            {/* Mobile menu button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="lg:hidden p-2 text-black/70 hover:text-black hover:bg-teal-50 rounded-lg"
