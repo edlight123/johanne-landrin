@@ -91,16 +91,9 @@ export default function AboutPage() {
 
               {/* Treatment philosophy (directly under bio; spans photo+bio) */}
               <div className="lg:col-span-2">
-                <Card>
-                  <div className="flex items-start gap-3">
-                    <Shield className="w-6 h-6 text-teal-700 mt-0.5 flex-shrink-0" />
-                    <div className="flex-1">
-                      <h2 className="text-2xl font-semibold text-black">{t.about.approachTitle}</h2>
-                      <p className="mt-4 text-black/70 leading-relaxed">{t.about.approachText}</p>
-                      <p className="mt-4 text-sm text-black/70">{t.about.frameText}</p>
-                    </div>
-                  </div>
-                </Card>
+                <h2 className="text-2xl font-semibold text-black">{t.about.approachTitle}</h2>
+                <p className="mt-4 text-black/70 leading-relaxed">{t.about.approachText}</p>
+                <p className="mt-4 text-sm text-black/70">{t.about.frameText}</p>
               </div>
             </div>
 
