@@ -52,11 +52,6 @@ export default function ContactPage() {
               <AteliersPanel />
             </AnimatedPanel>
           </div>
-
-          <div className="mt-10 rounded-lg bg-card border shadow-sm p-5 text-sm text-muted-foreground">
-            <p className="font-semibold text-foreground">{t.emergency.title}</p>
-            <p className="mt-2">{t.emergency.message}</p>
-          </div>
         </div>
       </section>
     </div>
